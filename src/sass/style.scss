@@ -5,27 +5,12 @@
 @import "layout";
 
 /* Components */
-@import "components/form_field";
+// @import "components/form_field";
 @import "components/navbar";
 @import "components/sidebar";
 
 /* Sections */
-@import "sections/registration_form";
+// @import "sections/registration_form";
 
 /* Pages / Views */
-@import "pages/registration";
-
-.sidebar-wrapper {
-  display: flex;
-  align-items: stretch;
-}
-
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  min-height: 100vh;
-}
-
-#sidebar.active {
-  margin-left: -250px;
-}
+// @import "pages/registration";
