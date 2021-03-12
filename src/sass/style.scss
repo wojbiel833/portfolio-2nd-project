@@ -6,7 +6,7 @@
 
 /* Components */
 @import "components/form_field";
-@import "components/nabar";
+@import "components/navbar";
 @import "components/sidebar";
 
 /* Sections */
@@ -14,3 +14,18 @@
 
 /* Pages / Views */
 @import "pages/registration";
+
+.sidebar-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}

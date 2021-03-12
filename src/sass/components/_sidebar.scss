@@ -1,0 +1,15 @@
+.sidebar-wrapper {
+  display: flex;
+  align-items: stretch;
+  background-color: red;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}

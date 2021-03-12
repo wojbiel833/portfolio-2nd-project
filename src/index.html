@@ -11,9 +11,6 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="/vendor/flickity.css" media="screen">
-
     <link
       href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
       rel="stylesheet"
@@ -35,6 +32,19 @@
                     </button>
                 </div>
             </div>
+             <!-- Togglebutton -->
+             <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+
+                    </div>
+                </nav>
+            </div>
             <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
                 <ul class="navbar-nav ml-auto flex-nowrap">
                     <li class="nav-item">
@@ -54,7 +64,7 @@
         </nav>
 
         <!-- Sidebar -->
-        <div class="siedbar-wrapper">
+        <div class="sidebar-wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h3>Bootstrap Sidebar</h3>
@@ -102,19 +112,6 @@
                 </ul>
             </nav>
 
-            <!-- Togglebutton -->
-            <!-- <div id="content">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                            <span>Toggle Sidebar</span>
-                        </button>
-
-                    </div>
-                </nav>
-            </div> -->
         </div>
 
         <script src="js/script.js" type="module"></script>
