@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 h1,
@@ -30,5 +30,7 @@ body {
 }
 
 section {
-  margin: 20px 40px;
+  margin: 20px 40px 20px 291px;
+  background-color: #fff;
+  width: 80vw;
 }

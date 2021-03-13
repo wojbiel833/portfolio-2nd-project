@@ -1,0 +1,41 @@
+.main-page {
+  h3 {
+    border-bottom: 1px $body-color solid;
+    padding: 10px 15px;
+  }
+  .date-picker {
+    position: relative;
+    height: 100px;
+
+    .date-inputs {
+      position: absolute;
+      height: 45px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 500px;
+
+      input {
+        height: 100%;
+        width: 200px;
+        border-radius: 5px;
+      }
+
+      .fa-calendar-alt {
+        color: $paragraph-font-color;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      .fa-undo-alt {
+        padding: 10px;
+        background-color: $main-color;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 20px;
+        border-radius: 5px;
+        // height: 100%;
+      }
+    }
+  }
+}
