@@ -5,19 +5,94 @@
   min-width: 250px;
   max-width: 250px;
   min-height: 100vh;
-  background-color: rgb(41, 41, 41);
+  background-color: $sidebar-main-color;
+
+  .sidebar-header {
+    margin: 10px 0 10px 20px;
+    color: $sidebar-label-font-color;
+    font-family: $sidebar-label-font;
+  }
 
   .list-unstyled {
-    i {
-      margin: 20px;
+    min-width: 250px;
+    max-width: 250px;
+
+    li {
+      a {
+        // height: inherit;
+        // width: inherit;
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+
+        i {
+          margin: 20px;
+        }
+      }
+      &:hover {
+        background-color: #3f3f3f;
+        border-left: 8px $main-color solid;
+        a {
+          color: $sidebar-label-font-color;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
     }
   }
-}
 
-#sidebar {
-  // min-width: 250px;
-  // max-width: 250px;
-  // min-height: 100vh;
+  .friends {
+    border-top: 1px $sidebar-items-font-color solid;
+
+    .sidebar-label {
+      margin: 30px 0 20px 20px;
+      color: $sidebar-label-font-color;
+      font-weight: 700;
+    }
+    li {
+      min-width: 250px;
+      max-width: 250px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+        display: flex;
+        flex-wrap: nowrap;
+
+        img {
+          margin: 10px;
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 50%;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 10%;
+            left: 90%;
+            // transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(19, 231, 0, 0.3);
+          }
+        }
+
+        &:hover {
+          background-color: #3f3f3f;
+          p {
+            color: $sidebar-label-font-color;
+          }
+        }
+      }
+    }
+
+    p {
+      margin: 20px 0 15px 0;
+    }
+  }
 }
 
 #sidebar.active {

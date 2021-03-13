@@ -1,10 +1,18 @@
 /* Colors */
-$paragraph-color: #000000;
-$brand-main-color: #ff0000;
+$body-color: #cacaca;
+$main-color: #ff6600;
+$sidebar-main-color: #292929;
+$sidebar-label-font-color: #fff;
+$sidebar-items-font-color: #8b8b8b;
+$paragraph-font-color: #505050;
 
 /* Font sizes */
+$sidebar-label-font-size: 22px;
+$sidebar-items-font-size: 18px;
 $paragraph-font-size: 16px;
 
 /* Fonts */
-$brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;
+$sidebar-label-font: "Lobster", cursive;
+$sidebar-items-font: "Lato", sans-serif;
+$main-font: "Montserrat", sans-serif;
+$button-font: "Oswald", sans-serif;
