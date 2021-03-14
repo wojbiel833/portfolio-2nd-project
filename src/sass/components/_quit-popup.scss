@@ -1,0 +1,69 @@
+.hidden {
+  display: none;
+}
+
+.quit-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  p {
+    padding: 20px;
+    border-bottom: 1px $sidebar-items-font-color solid;
+  }
+
+  div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+
+    .cancel-btn {
+      text-decoration: none;
+      padding: 10px 30px;
+      background-color: $sidebar-items-font-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin-right: 10px;
+
+      &:hover {
+        background-color: darken(
+          $color: $sidebar-items-font-color,
+          $amount: 10%
+        );
+      }
+    }
+
+    .quit-btn {
+      text-decoration: none;
+      padding: 10px 30px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+.quit-popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
