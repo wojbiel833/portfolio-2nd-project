@@ -9,7 +9,7 @@
   background-color: $sidebar-main-color;
 
   .sidebar-header {
-    margin: 10px 0 10px 20px;
+    margin: 15px 0 10px 20px;
     color: $sidebar-label-font-color;
     font-family: $sidebar-label-font;
   }
@@ -20,8 +20,6 @@
 
     li {
       a {
-        // height: inherit;
-        // width: inherit;
         text-decoration: none;
         color: $sidebar-items-font-color;
 

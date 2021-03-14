@@ -1,4 +1,4 @@
-.main-page {
+.graph-part {
   h3 {
     border-bottom: 1px $body-color solid;
     padding: 10px 15px;
@@ -25,6 +25,10 @@
         color: $paragraph-font-color;
         font-size: 20px;
         margin-left: 20px;
+
+        &:hover {
+          color: $sidebar-main-color;
+        }
       }
 
       .fa-undo-alt {
@@ -34,7 +38,113 @@
         font-size: 20px;
         margin-left: 20px;
         border-radius: 5px;
-        // height: 100%;
+
+        &:hover {
+          background-color: darken($color: $main-color, $amount: 10%);
+        }
+      }
+    }
+  }
+
+  .graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin: 50px 0;
+    }
+  }
+}
+
+.links-part {
+  margin-top: 20px;
+
+  h3 {
+    border-bottom: 1px $body-color solid;
+    padding: 10px 15px;
+  }
+
+  .links {
+    // // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+
+    .links-table {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .add-button {
+        text-decoration: none;
+        padding: 10px;
+        background-color: $main-color;
+        color: #fff;
+        font-size: 20px;
+        margin: 20px 30%;
+        border-radius: 5px;
+        width: 110px;
+        text-align: center;
+
+        &:hover {
+          background-color: darken($color: $main-color, $amount: 10%);
+        }
+      }
+
+      table {
+        .link-row {
+          border-top: 1px $sidebar-items-font-color solid;
+
+          &:last-of-type {
+            border-bottom: 1px $sidebar-items-font-color solid;
+          }
+
+          &:hover {
+            background-color: $table-hover;
+          }
+
+          &:hover .fa-link,
+          &:hover .fa-trash-alt {
+            display: block;
+          }
+        }
+
+        .name {
+          padding-left: 10px;
+          font-family: $sidebar-items-font;
+          font-weight: 700;
+          width: 300px;
+          height: 70px;
+        }
+
+        .link {
+          padding-left: 10px;
+          font-family: $sidebar-items-font;
+          width: 300px;
+          height: 70px;
+        }
+
+        .icons {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100px;
+          height: 70px;
+
+          a {
+            text-decoration: none;
+          }
+
+          .fa-link {
+            display: none;
+            color: lighten($color: $main-color, $amount: 20%);
+          }
+
+          .fa-trash-alt {
+            display: none;
+            color: $sidebar-items-font-color;
+          }
+        }
       }
     }
   }
