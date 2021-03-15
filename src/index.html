@@ -543,7 +543,7 @@
 
             <!-- login  -->
 
-            <div class="login-popup">
+            <div class="login-popup hidden">
                 <p>LOGIN</p>
                 <div class="login-details">
                     <input type="text" id="username" name="username" placeholder="Username">
@@ -553,7 +553,7 @@
                     <button class="login-btn">Enter</button>
                 </div>
             </div>
-            <div class="popup-overlay"></div>
+            <div class="popup-overlay hidden"></div>
 
             <!-- quit -->
 
@@ -565,6 +565,27 @@
                     </div>  
                 </div>
                 <div class="popup-overlay hidden"></div>
+
+                <!-- presoal chat -->
+
+                <div class="personal-chat-popup ">
+                    <p>ONLINE CHAT WITH YOUR PERSONAL MANAGER <span class="close-window-btn">x</span></p>
+                    
+                    <div class="recepient-info">
+                        <img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0">
+                        <div class="recepient-status">
+                            <p class="recepient-name">Wojciech B.</p>
+                            <p class="online">online</p>
+                        </div>
+                    </div>
+                    <div class="messages-display"></div>
+                    <div class="post-message">
+                        <input type="text" id="message" name="message" placeholder="Enter the message...">
+                        <!-- <i class="fas fa-comment-dots"></i> -->
+                        <button class="chat-send-btn">SEND</button>
+                    </div>  
+                </div>
+                <div class="popup-overlay "></div>
 
         <script src="js/script.js" type="module"></script>
     </body>
