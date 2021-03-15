@@ -1,5 +1,5 @@
 .sidebar-wrapper {
-  margin-top: -82px;
+  margin-top: -72px;
   position: fixed;
   display: flex;
   align-items: stretch;
@@ -9,7 +9,8 @@
   background-color: $sidebar-main-color;
 
   .sidebar-header {
-    margin: 15px 0 10px 20px;
+    height: 72px;
+    padding: 20px;
     color: $sidebar-label-font-color;
     font-family: $sidebar-label-font;
   }
@@ -20,10 +21,13 @@
 
     li {
       a {
+        display: block;
         text-decoration: none;
         color: $sidebar-items-font-color;
 
         i {
+          height: 10px;
+          width: 10px;
           margin: 20px;
         }
       }
@@ -58,24 +62,26 @@
         display: flex;
         flex-wrap: nowrap;
 
-        img {
-          margin: 10px;
-          width: 50px;
-          height: 50px;
-          object-fit: cover;
-          border-radius: 50%;
+        span {
+          img {
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
 
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             display: block;
-            top: 10%;
-            left: 90%;
+            top: 71%;
+            left: 20%;
             // transform: translateX(-50%);
-            width: 5px;
-            height: 5px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
-            background: rgba(19, 231, 0, 0.3);
+            background: $online-color;
           }
         }
 

@@ -46,13 +46,13 @@
             <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
                 <ul class="navbar-nav ml-auto flex-nowrap">
                     <li class="nav-item">
-                        <a href="#" class="nav-link m-2 mx-4 menu-item nav-active"><i class="fas fa-wallet"></i>    15 000 €    <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-link m-2 mx-4 menu-item nav-active"><i class="fas fa-wallet"></i>1,500.00 €<i class="fas fa-chevron-down"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link m-2 mx-4 menu-item"><i class="far fa-bell"></i></a>
+                        <a href="#" class="nav-link m-2 mx-4 menu-item"><span><i class="far fa-bell"></i></span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link m-2 mx-4 menu-item"><i class="far fa-user-circle"></i>    Leonardo Dicaprio</a>
+                        <a href="#" class="nav-link m-2 mx-4 menu-item"><i class="far fa-user-circle"></i>Leonardo Dicaprio</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link m-2 mx-4 menu-item"><i class=" log-out-btn fas fa-sign-out-alt"></i></a>
@@ -92,10 +92,10 @@
                     </li>
                 </ul>
                 <ul class="friends">
-                        <p class="sidebar-label">YOUR MANAGER</p>
+                        <li><p class="sidebar-label">YOUR MANAGER</p></li>
                     <li>
                         <a href="#">
-                            <img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0">
+                            <span><img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0"></span>
                             <p>Wojciech B.</p>
                         </a>
                     </li>
@@ -568,7 +568,7 @@
 
                 <!-- presoal chat -->
 
-                <div class="personal-chat-popup ">
+                <div class="personal-chat-popup">
                     <p>ONLINE CHAT WITH YOUR PERSONAL MANAGER <span class="close-window-btn">x</span></p>
                     
                     <div class="recepient-info">
@@ -578,14 +578,17 @@
                             <p class="online">online</p>
                         </div>
                     </div>
-                    <div class="messages-display"></div>
+                    <div class="messages-display">
+                        <div class="message-you">Hi!</div>
+                        <div class="message-recepient">Hello!</div>
+                    </div>
                     <div class="post-message">
                         <input type="text" id="message" name="message" placeholder="Enter the message...">
                         <!-- <i class="fas fa-comment-dots"></i> -->
                         <button class="chat-send-btn">SEND</button>
                     </div>  
                 </div>
-                <div class="popup-overlay "></div>
+                <div class="popup-overlay"></div>
 
         <script src="js/script.js" type="module"></script>
     </body>

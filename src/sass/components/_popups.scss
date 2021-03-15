@@ -101,6 +101,46 @@
     height: 250px;
     width: 100%;
     padding: 25px;
+
+    .message-you {
+      background-color: #a0e1ff;
+      padding: 10px;
+      margin: 15px;
+      border-radius: 10px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 49%;
+        left: 7%;
+        // transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #a0e1ff;
+      }
+    }
+
+    .message-recepient {
+      background-color: #ffdb99;
+      padding: 10px;
+      margin: 15px;
+      border-radius: 10px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 55%;
+        left: 100%;
+        // transform: translateX(-50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #ffdb99;
+      }
+    }
   }
   .post-message {
     input {

@@ -2,5 +2,34 @@
   border-left: 1px solid $sidebar-main-color;
   a {
     margin: 0 15px 0 15px;
+
+    i {
+      font-size: 22px;
+      margin: 0 10px;
+    }
+
+    span {
+      position: relative;
+
+      // i {
+      //   font-size: 22px;
+      //   margin: 0 10px;
+      // }
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -5%;
+        left: 55%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $main-color;
+      }
+    }
+
+    .log-out-btn {
+      margin-right: -7px;
+    }
   }
 }
