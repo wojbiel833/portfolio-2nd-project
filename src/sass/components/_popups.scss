@@ -1,6 +1,45 @@
 .hidden {
   display: none;
 }
+.login-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  p {
+    padding: 20px;
+    border-bottom: 1px $sidebar-items-font-color solid;
+  }
+
+  .login-details {
+    margin: 10px 0 0 30px;
+
+    input {
+      height: 45px;
+      margin: 30px 0 50px;
+      padding-left: 10px;
+    }
+    .login-btn {
+      text-decoration: none;
+      padding: 10px 30px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
 
 .quit-popup {
   position: absolute;
@@ -41,9 +80,10 @@
       }
     }
 
-    .quit-btn {
+    .quit-btn,
+    .login-btn {
       text-decoration: none;
-      padding: 10px 30px;
+      padding: 10px 10px;
       background-color: $main-color;
       color: #fff;
       font-size: 20px;
@@ -57,7 +97,7 @@
   }
 }
 
-.quit-popup-overlay {
+.popup-overlay {
   position: absolute;
   top: 0;
   left: 0;

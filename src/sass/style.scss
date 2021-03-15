@@ -1,20 +1,20 @@
-@import "variables";
-@import "global";
+@import 'variables';
+@import 'global';
 
-@import "mixins";
+@import 'mixins';
 
-@import "normalize";
-@import "layout";
+@import 'normalize';
+@import 'layout';
 
 /* Components */
 // @import "components/form_field";
-@import "components/navbar";
-@import "components/sidebar";
-@import "components/quit-popup";
+@import 'components/navbar';
+@import 'components/sidebar';
+@import 'components/popups';
 
 /* Sections */
 // @import "sections/registration_form";
 
 /* Pages / Views */
-@import "pages/main-page";
-@import "pages/form";
+@import 'pages/main-page';
+@import 'pages/form';
