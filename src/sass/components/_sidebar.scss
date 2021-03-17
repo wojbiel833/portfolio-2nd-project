@@ -63,6 +63,8 @@
         flex-wrap: nowrap;
 
         span {
+          position: relative;
+
           img {
             margin: 10px;
             width: 50px;
@@ -75,9 +77,8 @@
             content: '';
             position: absolute;
             display: block;
-            top: 71%;
-            left: 20%;
-            // transform: translateX(-50%);
+            top: 13%;
+            left: 64%;
             width: 15px;
             height: 15px;
             border-radius: 50%;

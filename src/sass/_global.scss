@@ -14,6 +14,7 @@ h4,
 h5,
 h6 {
   text-align: left;
+  font-size: 20px;
 }
 
 a {
@@ -34,4 +35,5 @@ section {
   margin: 20px 40px 20px 280px;
   background-color: #fff;
   width: 80vw;
+  box-shadow: 0 0 1em $sidebar-main-color;
 }
