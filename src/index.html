@@ -571,7 +571,7 @@
                 <div class="personal-chat-popup hidden">
                     <div class="popup-heading">
                         <h3>ONLINE CHAT WITH YOUR PERSONAL MANAGER </h3>
-                        <span class="close-window-btn">x</span>
+                        <span class="close-window-btn"><a class="#">x</a></span>
                     </div>
                     <div class="recepient-info">
                         <img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0">
@@ -593,17 +593,17 @@
 
                 <!-- add links -->
 
-                <div class="add-links-popup ">
+                <div class="add-links-popup hidden">
                     <div class="popup-heading">
                         <h3>ADD URL</h3>
-                        <span class="close-window-btn">x</span>
+                        <span class="close-window-btn"><a href="#">x</a></span>
                     </div>
                     <div class="select-field">
                         <div class="select-scheme-name">
                             <label>Scheme name</label>
                             <input type="text" id="scheme-name" name="scheme-name" placeholder="Name">
                             <!-- <i class="far fa-user"></i> -->
-                            <select type="w3-select" id="password" name="select-compain">
+                            <select type="w3-select" id="scheme" name="select-compain">
                                 <option value="0" disabled selected>Select compain</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
@@ -757,12 +757,198 @@
                             </div>
                         </div>
                     </div>
-                <div class="generated-link">
-                    <input type="text" placeholder="Generated link">
-                    <button class="copy-btn">Copy link</button>
-                    <button class="enter-btn">Enter</button>
+                    <div class="generated-link">
+                        <input type="text" placeholder="Generated link" disabled>
+                        <button class="copy-btn" disabled>Copy link</button>
+                        <button class="enter-btn">Enter</button>
+                    </div>
                 </div>
-                </div>
+
+                <!-- add banners -->
+
+                <div class="add-banners-popup ">
+                    <div class="popup-heading">
+                        <h3>ADD BANNERS</h3>
+                        <span class="close-window-btn"><a href="#">x</a></span>
+                    </div>
+                    <div class="select-field">
+                        <div class="select-scheme-name">
+                            <label>Scheme name</label>
+                            <input type="text" id="banner-name" name="scheme-name" placeholder="Name">
+                            <!-- <i class="far fa-user"></i> -->
+                            <label>Compain</label>
+                            <select type="w3-select" id="banner" name="select-compain">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="select-language">
+                            <label>Language</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>EN</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="banner-details">
+                            <label>Weight-height</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Design</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Filetype</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>All</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+
+                        </div>
+                        <div class="select-banners">
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="banner">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+
+                        </div>
+                        <div class="select-websites">
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                            <div class="b-website">
+                                <input type="checkbox">
+                                <label>Lorem ipsum dolor <i class="fas fa-external-link-alt"></i></label>
+                            </div>
+                        </div>
+                        
+                        <div class="generated-link">
+                            <input type="text" placeholder="Generated link" disabled>
+                            <button class="copy-btn" disabled>Copy link</button>
+                            <button class="enter-btn">Enter</button>
+                        </div>
+                    </div>
 
 
         <script src="js/script.js" type="module"></script>

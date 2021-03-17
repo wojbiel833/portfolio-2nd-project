@@ -56,15 +56,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
     h3 {
       padding: 10px;
       margin: 0;
-      // border-bottom: 1px $sidebar-items-font-color solid;
     }
 
     span {
       font-size: 30px;
       margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+        cursor: pointer;
+      }
     }
   }
   .recepient-info {
@@ -248,12 +255,12 @@
 }
 
 .add-links-popup {
-  position: absolute;
+  margin-top: 300px;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 80%;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -273,12 +280,18 @@
     span {
       font-size: 30px;
       margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+      }
     }
   }
 
   .select-field {
     display: flex;
     flex-flow: row wrap;
+    margin: 10px;
 
     .select-scheme-name {
       width: 85%;
@@ -286,7 +299,7 @@
       label {
         display: block;
         font-weight: 700;
-        margin: 5px 0 0 10px;
+        margin: 5px 0 0 15px;
       }
 
       input,
@@ -327,7 +340,7 @@
         display: flex;
         flex-flow: row wrap;
         flex: 0 0 33%;
-        height: 350px;
+        height: 380px;
         overflow: auto;
         border-top: 1px $sidebar-items-font-color solid;
         border-bottom: 1px $sidebar-items-font-color solid;
@@ -346,12 +359,21 @@
 
             i {
               margin: 10px;
+              cursor: pointer;
             }
           }
           input {
             margin: 20px;
             height: 20px;
             width: 20px;
+          }
+          // input[type='checkbox']:checked + label {
+          //   background: $online-color;
+          //   font-style: normal;
+          // }
+
+          &:hover {
+            background-color: $table-hover;
           }
         }
       }
@@ -370,13 +392,183 @@
     .copy-btn {
       text-decoration: none;
       padding: 10px 10px;
-      background: $sidebar-items-font-color;
+      background: $online-color;
       color: #fff;
       font-size: 20px;
       border-radius: 5px;
       text-align: center;
       margin: 5px;
     }
+    .enter-btn {
+      text-decoration: none;
+      padding: 10px 10px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+.add-banners-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  .popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    h3 {
+      padding: 10px;
+      margin: 0;
+    }
+
+    span {
+      font-size: 30px;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+      }
+    }
+  }
+
+  .select-field {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+
+    .select-scheme-name {
+      width: 85%;
+
+      label {
+        position: absolute;
+        font-weight: 700;
+        margin: 5px 0 0 15px;
+      }
+
+      input,
+      select {
+        height: 45px;
+        width: calc(50% - 40px);
+        margin: 45px 0 0 15px;
+        padding: 10px;
+      }
+    }
+    .select-language {
+      width: 15%;
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      select {
+        height: 45px;
+        width: 90%;
+        margin: 8px 15px 15px 0;
+        padding: 10px;
+      }
+    }
+  }
+
+  .banner-details {
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    label {
+      position: absolute;
+      font-weight: 700;
+      margin: 5px 0 0 15px;
+    }
+
+    input,
+    select {
+      height: 45px;
+      min-width: calc(32% - 10px);
+      margin: 45px 0 20px 15px;
+      padding: 10px;
+    }
+  }
+  .select-banners,
+  .select-websites {
+    width: 50%;
+    height: 380px;
+    overflow: auto;
+
+    .banner,
+    .b-website {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: 90%;
+
+        i {
+          margin: 10px;
+          cursor: pointer;
+        }
+      }
+
+      input {
+        margin: 20px;
+        height: 20px;
+        width: 20px;
+      }
+
+      &:hover {
+        background-color: $table-hover;
+      }
+    }
+  }
+
+  .generated-link {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 5px;
+    border-top: 1px $sidebar-items-font-color solid;
+
+    input {
+      width: calc(100% - 230px);
+      height: 47px;
+      margin: 5px;
+    }
+
+    .copy-btn {
+      text-decoration: none;
+      padding: 10px 10px;
+      background: $online-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px;
+    }
+
     .enter-btn {
       text-decoration: none;
       padding: 10px 10px;
