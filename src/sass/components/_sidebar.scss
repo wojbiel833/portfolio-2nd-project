@@ -7,6 +7,7 @@
   max-width: 250px;
   min-height: 100vh;
   background-color: $sidebar-main-color;
+  z-index: 5000;
 
   .sidebar-header {
     height: 72px;

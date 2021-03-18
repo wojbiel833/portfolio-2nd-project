@@ -13,9 +13,9 @@ const logOutBtn = document.querySelector(select.buttons.logOutBtn);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
 const sidebarLinks = document.getElementById(select.sidebar.links);
-console.log(sidebarLinks);
+// console.log(sidebarLinks);
 const sidebarBanners = document.getElementById(select.sidebar.banners);
-console.log(sidebarBanners);
+// console.log(sidebarBanners);
 
 // Sections / Components
 
@@ -26,9 +26,9 @@ const quitPopUp = document.querySelector(select.components.quitPopUp);
 const chatPopUp = document.querySelector(select.components.chatPopUp);
 // console.log(chatPopUp);
 const linksPopUp = document.querySelector(select.components.linksPopUp);
-console.log(linksPopUp);
+// console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
-console.log(bannersPopUp);
+// console.log(bannersPopUp);
 
 // Event handlers
 

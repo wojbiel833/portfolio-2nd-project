@@ -1,3 +1,7 @@
+.navbar.sticky-top {
+  border-bottom: 1px solid $sidebar-main-color;
+}
+
 .nav-item {
   border-left: 1px solid $sidebar-main-color;
   a {
