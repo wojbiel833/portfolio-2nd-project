@@ -1,0 +1,143 @@
+.new-postback {
+  h3 {
+    padding: 20px;
+    border-bottom: 1px $sidebar-items-font-color solid;
+  }
+
+  .postback-parameters {
+    border-bottom: 1px $sidebar-items-font-color solid;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 100%;
+
+    p {
+      width: 100%;
+      margin: 16px;
+    }
+
+    label {
+      position: absolute;
+      display: block;
+      font-weight: 700;
+      margin: 50px 0 0 20px;
+
+      &:last-of-type {
+        margin-left: 51%;
+      }
+    }
+
+    textarea {
+      height: 200px;
+      width: calc(50% - 40px);
+      margin: 50px 15px 30px;
+      padding: 10px;
+    }
+  }
+
+  .postback-details {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 33%;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    label {
+      position: absolute;
+      top: 14%;
+      left: 34%;
+      font-weight: 700;
+
+      &:first-of-type {
+        left: 1.5%;
+      }
+
+      &:last-of-type {
+        left: 65.5%;
+      }
+    }
+
+    select {
+      margin: 70px 20px;
+      width: calc(32% - 40px);
+      height: 45px;
+    }
+  }
+
+  .postback-status {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    p {
+      position: absolute;
+      font-weight: 700;
+      padding: 20px;
+      left: 1%;
+
+      &:last-of-type {
+        left: 52%;
+      }
+
+      span {
+        color: red;
+      }
+    }
+
+    .statuses {
+      width: 50%;
+      height: 200px;
+      margin: 70px 20px;
+      overflow: auto;
+
+      .status {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+
+        label {
+          display: inline-block;
+          justify-content: space-between;
+          align-items: center;
+          margin: 20px;
+          width: 70%;
+        }
+
+        input {
+          margin: 20px;
+          height: 20px;
+          width: 20px;
+        }
+
+        &:hover {
+          background-color: $table-hover;
+        }
+      }
+    }
+
+    .send-delay {
+      border-left: 1px $sidebar-items-font-color solid;
+      position: relative;
+      width: calc(50% - 40px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .create-pixel-btn {
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: $main-color;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 15px 15px 15px 88%;
+
+    &:hover {
+      background-color: darken($color: $main-color, $amount: 10%);
+    }
+  }
+}

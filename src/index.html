@@ -638,7 +638,7 @@
 
             <!-- Payouts -->
 
-            <section class="details">
+            <!-- <section class="details">
                 <h3>PAYOUT HISTORY</h3>
                 <div class="details-field">
                     <div class="details-table">
@@ -743,6 +743,80 @@
                           </div>
                     </div>
                 </div>
+            </section> -->
+
+            <!-- New postback -->
+
+            <section class="new-postback">
+                <h3>NEW POSTBACK</h3>
+                <div class="postback-parameters">
+                    <p>You can insert some parameters in this postback:</p>
+                    <label>Signup</label>
+                    <textarea type="text" id="signup" name="signup" placeholder="Signup"></textarea>
+                    <label>Postback</label>
+                    <textarea type="text" id="postback" name="postback" placeholder="Postback"></textarea>
+                </div>
+                <div class="postback-details">
+                    <label>Postback type</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>S2S</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>To countries</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>Select countries</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Sending options</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>Select</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+                <div class="postback-status">
+                    <p><span>NOT</span> send statuses</p>
+                    <div class="statuses">
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                        <div class="status">
+                            <input type="checkbox">
+                            <label>Lorem ipsum dolor</label>
+                        </div>
+                    </div>
+                    <p>Send after:</p>
+                    <div class="send-delay">
+                        <img src="images/postback-delay.png" alt="">
+                    </div>
+                </div>
+                <button class="create-pixel-btn">Create Pixel</button>
             </section>
 
             <!-- POPUPS  -->
