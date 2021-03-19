@@ -10,10 +10,22 @@
   z-index: 5000;
 
   .sidebar-header {
+    position: relative;
     height: 72px;
     padding: 20px;
     color: $sidebar-label-font-color;
     font-family: $sidebar-label-font;
+
+    .sidebar-toggler {
+      position: absolute;
+      color: white;
+      z-index: 5001;
+      margin: 30px;
+      font-size: 40px;
+      top: 20%;
+      left: 80%;
+      border-radius: 10px;
+    }
   }
 
   .list-unstyled {
@@ -104,4 +116,71 @@
 
 #sidebar.active {
   margin-left: -250px;
+}
+
+@media (max-width: 767px) {
+  .sidebar-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 30px;
+
+    .sidebar-header {
+      h3 {
+        font-size: 50px;
+        margin: 30px;
+      }
+    }
+
+    .list-unstyled {
+      margin-top: 60px;
+      min-width: 100%;
+      max-width: 100%;
+
+      li {
+        // text-align: center;
+        padding: 30px;
+
+        a {
+          font-size: 40px;
+        }
+      }
+      i {
+        margin: 10px 20px 10px 10px;
+      }
+    }
+
+    .friends {
+      .sidebar-label {
+        font-size: 40px;
+        margin: 30px;
+        width: 100%;
+      }
+
+      li {
+        min-width: 100%;
+        max-width: 100%;
+
+        a {
+          margin: 60px;
+          font-size: 40px;
+
+          span {
+            img {
+              width: 100px;
+              height: 100px;
+            }
+
+            &:after {
+              top: 5%;
+              width: 30px;
+              height: 30px;
+            }
+            p {
+              margin: 30px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

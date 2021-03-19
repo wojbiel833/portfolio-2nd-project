@@ -6,8 +6,10 @@ export const select = {
   buttons: {
     logOutBtn: '.log-out-btn',
     chatButtons: '.sidebar-wrapper .friends li a',
+    sidebarCollapse: 'sidebarCollapse',
   },
   components: {
+    sidebar: '.sidebar-wrapper',
     linksPopUp: '.add-links-popup',
     bannersPopUp: '.add-banners-popup',
     chatPopUp: '.personal-chat-popup',

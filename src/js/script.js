@@ -12,6 +12,8 @@ const logOutBtn = document.querySelector(select.buttons.logOutBtn);
 // console.log(logOutBtn);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
+const sidebarCollapse = document.getElementById(select.buttons.sidebarCollapse);
+console.log(sidebarCollapse);
 const sidebarLinks = document.getElementById(select.sidebar.links);
 // console.log(sidebarLinks);
 const sidebarBanners = document.getElementById(select.sidebar.banners);
@@ -29,8 +31,13 @@ const linksPopUp = document.querySelector(select.components.linksPopUp);
 // console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
 // console.log(bannersPopUp);
-
+const sidebar = document.querySelector(select.components.sidebar);
+console.log(sidebar);
 // Event handlers
+sidebarCollapse.addEventListener('click', function (e) {
+  e.preventDefault();
+  sidebar.classList.remove('hidden');
+});
 
 logOutBtn.addEventListener('click', function (e) {
   e.preventDefault();
