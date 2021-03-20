@@ -6,9 +6,11 @@ export const select = {
   buttons: {
     logOutBtn: '.log-out-btn',
     chatButtons: '.sidebar-wrapper .friends li a',
-    sidebarCollapse: 'sidebarCollapse',
+    sidebarShow: 'sidebar-show',
+    sidebarHide: '.sidebar-hide',
   },
   components: {
+    navbarItems: '.from-navbar',
     sidebar: '.sidebar-wrapper',
     linksPopUp: '.add-links-popup',
     bannersPopUp: '.add-banners-popup',
@@ -20,6 +22,6 @@ export const select = {
 
 export const classNames = {
   popUps: {
-    show: '.hidden',
+    show: 'hidden',
   },
 };

@@ -32,7 +32,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
 
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <button type="button" id="sidebar-show" class="btn btn-info" data-effect="st-effect-14">
                             <i class="fas fa-align-left"></i>
                             <span>Toggle Sidebar</span>
                         </button>
@@ -59,50 +59,70 @@
         </nav>
 
         <!-- Sidebar -->
-        <div class="sidebar-wrapper">
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                    <h3>Just do it</h3>
-                    <a href="#" class="sidebar-toggler">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
-        
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        <a href="#"><i class="far fa-star"></i> General</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-bars"></i> Details</a>
-                    </li>
-                    <li>
-                        <a id="links" href="#"><i class="fas fa-link"></i> Links</a>
-                    </li>
-                    <li>
-                        <a id="banners" href="#"><i class="fas fa-th-large"></i> Banners</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="far fa-user"></i> Personal data</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-hand-holding-usd"></i> Payout</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-undo"></i> Postback</a>
-                    </li>
-                </ul>
-                <ul class="friends">
-                        <li><p class="sidebar-label">YOUR MANAGER</p></li>
-                    <li>
-                        <a href="#">
-                            <span><img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0"></span>
-                            <p>Wojciech B.</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <div id="st-container" class="st-container">
+            <div class="st-pusher">
+                <div class="sidebar-wrapper st-menu st-effect-14 hidden" id="menu-14">
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3 class="icon icon-stack">Just do it</h3>
+                            <a href="#" class="sidebar-hide hidden">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                
+                        <ul class="list-unstyled components">
+                            <li class="active">
+                                <a href="#"><i class="far fa-star"></i> <span>General</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-bars"></i> <span>Details</span></a>
+                            </li>
+                            <li>
+                                <a id="links" href="#"><i class="fas fa-link"></i> <span>Links</span></a>
+                            </li>
+                            <li>
+                                <a id="banners" href="#"><i class="fas fa-th-large"></i> <span>Banners</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-user"></i> <span>Personal data</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-hand-holding-usd"></i> <span>Payout</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-undo"></i> <span>Postback</span></a>
+                            </li>
+                        </ul>
+                        <ul class="friends">
+                                <li><p class="sidebar-label">YOUR MANAGER</p></li>
+                            <li>
+                                <a href="#">
+                                    <span><img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0"></span>
+                                    <p>Wojciech B.</p>
+                                </a>
+                            </li>
+                        </ul>
 
+                        <ul class="from-navbar hidden">
+                            <li><p class="sidebar-label">YOUR ACCOUNT</p></li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class="fas fa-wallet"></i>1,500.00 €<i class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><span><i class="far fa-bell"></i></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class="far fa-user-circle"></i>Leonardo Dicaprio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class=" log-out-btn fas fa-sign-out-alt"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
         <!-- Main page -->
 
              <!-- <section class="graph-part">

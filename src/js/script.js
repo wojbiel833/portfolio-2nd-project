@@ -1,10 +1,5 @@
 // "use strict";
 import { select, classNames } from './settings.js';
-// $(document).ready(function () {
-//   $("#sidebarCollapse").on("click", function () {
-//     $("#sidebar").toggleClass("active");
-//   });
-// });
 
 // Elements
 
@@ -12,8 +7,10 @@ const logOutBtn = document.querySelector(select.buttons.logOutBtn);
 // console.log(logOutBtn);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
-const sidebarCollapse = document.getElementById(select.buttons.sidebarCollapse);
-console.log(sidebarCollapse);
+const sidebarShow = document.getElementById(select.buttons.sidebarShow);
+console.log(sidebarShow);
+const sidebarHide = document.querySelector(select.buttons.sidebarHide);
+console.log(sidebarHide);
 const sidebarLinks = document.getElementById(select.sidebar.links);
 // console.log(sidebarLinks);
 const sidebarBanners = document.getElementById(select.sidebar.banners);
@@ -31,34 +28,80 @@ const linksPopUp = document.querySelector(select.components.linksPopUp);
 // console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
 // console.log(bannersPopUp);
+const navbarItems = document.querySelector(select.components.navbarItems);
+// console.log(navbarItems);
 const sidebar = document.querySelector(select.components.sidebar);
-console.log(sidebar);
+// console.log(sidebar);
+
+// Sidebar show effect
+const click = document.querySelectorAll('div button');
+const menu = document.querySelector('#st-container');
+const pusher = document.querySelector('.st-pusher');
+// to store the corresponding effect
+let effect;
+
+// adding a click event to all the buttons
+for (let i = 0; i < click.length; i++) {
+  click[i].addEventListener('click', addClass);
+}
+
+pusher.addEventListener('click', closeMenu);
+
+function addClass(e) {
+  // to get the correct effect
+  effect = e.target.getAttribute('data-effect');
+  // adding the effects
+  menu.classList.toggle(effect);
+  menu.classList.toggle('st-menu-open');
+
+  // console.log(e.target.getAttribute('data-effect'));
+}
+
+function closeMenu(el) {
+  // if the click target has this class then we close the menu by removing all the classes
+  if (el.target.classList.contains('st-pusher')) {
+    menu.classList.toggle(effect);
+    menu.classList.toggle('st-menu-open');
+    // console.log(el.target);
+  }
+}
+
 // Event handlers
-sidebarCollapse.addEventListener('click', function (e) {
+
+sidebarShow.addEventListener('click', function (e) {
   e.preventDefault();
-  sidebar.classList.remove('hidden');
+  sidebar.classList.remove(classNames.popUps.show);
+  navbarItems.classList.remove(classNames.popUps.show);
+  sidebarHide.classList.remove(classNames.popUps.show);
+});
+
+sidebarHide.addEventListener('click', function (e) {
+  e.preventDefault();
+  sidebar.classList.add(classNames.popUps.show);
+  navbarItems.classList.add(classNames.popUps.show);
+  sidebarHide.classList.add(classNames.popUps.show);
 });
 
 logOutBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  quitPopUp.classList.remove('hidden');
-  popUpOverlay.classList.remove('hidden');
+  quitPopUp.classList.remove(classNames.popUps.show);
+  popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
-  chatPopUp.classList.remove('hidden');
-  popUpOverlay.classList.remove('hidden');
+  chatPopUp.classList.remove(classNames.popUps.show);
+  popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 sidebarLinks.addEventListener('click', function (e) {
   e.preventDefault();
-  linksPopUp.classList.remove('hidden');
-  popUpOverlay.classList.remove('hidden');
+  linksPopUp.classList.remove(classNames.popUps.show);
+  popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 sidebarBanners.addEventListener('click', function (e) {
   e.preventDefault();
-  bannersPopUp.classList.remove('hidden');
-  popUpOverlay.classList.remove('hidden');
+  bannersPopUp.classList.remove(classNames.popUps.show);
+  popUpOverlay.classList.remove(classNames.popUps.show);
 });
