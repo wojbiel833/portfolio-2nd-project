@@ -596,3 +596,247 @@
   backdrop-filter: blur(3px);
   z-index: 5010;
 }
+
+@media (min-width: 0px) and (max-width: 499px) {
+  .login-popup {
+    width: 90%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      input {
+        margin: 10px 0 20px;
+      }
+      .login-btn {
+        margin: 10px;
+      }
+    }
+  }
+
+  .personal-chat-popup {
+    width: 100%;
+
+    .post-message {
+      input {
+        width: 67%;
+      }
+    }
+  }
+
+  .add-links-popup {
+    width: 100%;
+    height: auto;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 100%;
+
+        input,
+        select {
+          width: calc(100% - 40px);
+          margin-bottom: 20px;
+        }
+      }
+      .select-language {
+        width: 100%;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+      .select-websites {
+        height: 400px;
+
+        .websites {
+          flex-flow: row wrap;
+          flex: 0 0 100%;
+
+          .website {
+            width: 100%;
+            flex-flow: row nowrap;
+          }
+        }
+      }
+    }
+    .generated-link {
+      margin: 20px 0 10px;
+    }
+
+    .quit-popup {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 500px) and(max-width: 767px) {
+    .login-popup {
+      width: 90%;
+
+      .login-details {
+        margin: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        input {
+          margin: 10px 0 20px;
+        }
+        .login-btn {
+          margin: 10px;
+        }
+      }
+    }
+
+    .personal-chat-popup {
+      width: 90%;
+
+      .post-message {
+        input {
+          width: 75%;
+        }
+      }
+    }
+
+    .add-links-popup {
+      width: 100%;
+      height: auto;
+
+      .select-field {
+        .select-scheme-name {
+          border-bottom: 1px $sidebar-items-font-color solid;
+          width: 100%;
+
+          input,
+          select {
+            width: calc(100% - 40px);
+            margin-bottom: 20px;
+          }
+        }
+        .select-language {
+          width: 100%;
+
+          label {
+            margin: 5px 0 0 15px;
+          }
+
+          select {
+            width: calc(100% - 40px);
+            margin: 15px;
+          }
+        }
+        .select-websites {
+          height: 400px;
+
+          .websites {
+            flex-flow: row wrap;
+            flex: 0 0 100%;
+
+            .website {
+              width: 100%;
+              flex-flow: row nowrap;
+            }
+          }
+        }
+      }
+      .generated-link {
+        margin: 20px 0 10px;
+      }
+    }
+
+    .quit-popup {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-popup {
+    width: 85%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin: 10px 10px 20px;
+      }
+      .login-btn {
+        margin: 0 0 1.5% 3%;
+      }
+    }
+  }
+
+  .personal-chat-popup {
+    width: 80%;
+
+    .post-message {
+      input {
+        width: 80%;
+      }
+    }
+  }
+
+  .add-links-popup {
+    width: 100%;
+    height: auto;
+
+    .select-field {
+      .select-scheme-name {
+        width: 85%;
+
+        input,
+        select {
+          width: calc(50% - 40px);
+          margin-bottom: 20px;
+        }
+      }
+
+      .select-language {
+        width: 15%;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+
+      .select-websites {
+        height: 400px;
+
+        .websites {
+          flex-flow: row wrap;
+          flex: 0 0 50%;
+
+          .website {
+            width: 50%;
+            flex-flow: row nowrap;
+          }
+        }
+      }
+    }
+    .generated-link {
+      margin: 20px 0 10px;
+    }
+  }
+
+  .quit-popup {
+    width: 35%;
+  }
+}
+
+// @media (min-width: 992px) and(max-width: 1024px)
+// @media (min-width: 1025px) and(max-width: 1250px)
