@@ -65,43 +65,61 @@ function closeMenu(el) {
     // console.log(el.target);
   }
 }
+// Functions
+const addHidden = element => element.classList.add(classNames.popUps.show);
+const removeHidden = element =>
+  element.classList.remove(classNames.popUps.show);
 
 // Event handlers
 
 sidebarShow.addEventListener('click', function (e) {
   e.preventDefault();
-  sidebar.classList.remove(classNames.popUps.show);
-  navbarItems.classList.remove(classNames.popUps.show);
-  sidebarHide.classList.remove(classNames.popUps.show);
+  removeHidden(sidebar);
+  removeHidden(navbarItems);
+  removeHidden(sidebarHide);
+  // sidebar.classList.remove(classNames.popUps.show);
+  // navbarItems.classList.remove(classNames.popUps.show);
+  // sidebarHide.classList.remove(classNames.popUps.show);
 });
 
 sidebarHide.addEventListener('click', function (e) {
   e.preventDefault();
-  sidebar.classList.add(classNames.popUps.show);
-  navbarItems.classList.add(classNames.popUps.show);
-  sidebarHide.classList.add(classNames.popUps.show);
+  addHidden(sidebar);
+  addHidden(navbarItems);
+  addHidden(sidebarHide);
+  // sidebar.classList.add(classNames.popUps.show);
+  // navbarItems.classList.add(classNames.popUps.show);
+  // sidebarHide.classList.add(classNames.popUps.show);
 });
 
 logOutBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  quitPopUp.classList.remove(classNames.popUps.show);
-  popUpOverlay.classList.remove(classNames.popUps.show);
+  removeHidden(quitPopUp);
+  removeHidden(popUpOverlay);
+  //   quitPopUp.classList.remove(classNames.popUps.show);
+  //   popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
-  chatPopUp.classList.remove(classNames.popUps.show);
-  popUpOverlay.classList.remove(classNames.popUps.show);
+  removeHidden(chatPopUp);
+  removeHidden(popUpOverlay);
+  // chatPopUp.classList.remove(classNames.popUps.show);
+  // popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 sidebarLinks.addEventListener('click', function (e) {
   e.preventDefault();
-  linksPopUp.classList.remove(classNames.popUps.show);
-  popUpOverlay.classList.remove(classNames.popUps.show);
+  removeHidden(linksPopUp);
+  removeHidden(popUpOverlay);
+  // linksPopUp.classList.remove(classNames.popUps.show);
+  // popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 sidebarBanners.addEventListener('click', function (e) {
   e.preventDefault();
-  bannersPopUp.classList.remove(classNames.popUps.show);
-  popUpOverlay.classList.remove(classNames.popUps.show);
+  removeHidden(bannersPopUp);
+  removeHidden(popUpOverlay);
+  // bannersPopUp.classList.remove(classNames.popUps.show);
+  // popUpOverlay.classList.remove(classNames.popUps.show);
 });

@@ -5,11 +5,14 @@
   }
 
   .details-field {
+    width: 100%;
+
     .details-table {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       align-items: center;
       justify-content: center;
+      width: 100%;
 
       .date-picker {
         position: relative;
@@ -23,7 +26,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          min-width: 500px;
+          width: 500px;
 
           input {
             height: 100%;
@@ -56,37 +59,42 @@
         }
       }
 
-      table {
-        width: 95%;
-        text-align: center;
-        margin: 50px 0;
+      .scroll-wrapper {
+        width: 100%;
 
-        .table-heading:hover {
-          cursor: pointer;
-          background-color: $table-hover;
-        }
+        table {
+          width: 95%;
+          text-align: center;
+          margin: 50px 0;
 
-        .table-row:hover {
-          cursor: pointer;
-          background-color: $table-hover;
-        }
-        tr {
-          border-bottom: 1px $sidebar-items-font-color solid;
-        }
+          .table-heading:hover {
+            cursor: pointer;
+            background-color: $table-hover;
+          }
 
-        th {
-          padding: 10px;
-          border-bottom: 1px solid $sidebar-items-font-color;
-        }
+          .table-row:hover {
+            cursor: pointer;
+            background-color: $table-hover;
+          }
+          tr {
+            border-bottom: 1px $sidebar-items-font-color solid;
+          }
 
-        td {
-          padding: 20px;
+          th {
+            padding: 10px;
+            border-bottom: 1px solid $sidebar-items-font-color;
+          }
+
+          td {
+            padding: 20px;
+          }
         }
       }
 
       .detail-pages {
         display: flex;
         flex-flow: row nowrap;
+        justify-content: center;
         font-size: 20px;
         margin-bottom: 30px;
 
@@ -107,6 +115,59 @@
               background-color: $table-hover;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 499px) {
+  .details {
+    .details-field {
+      .details-table {
+        display: inline;
+
+        .date-picker {
+          .date-inputs {
+            width: 320px;
+
+            input {
+              height: 100%;
+              width: 100px;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .scroll-wrapper {
+          overflow-x: auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 500px) and(max-width: 767px) {
+  .details {
+    .details-field {
+      .details-table {
+        display: inline;
+
+        .date-picker {
+          .date-inputs {
+            width: 450px;
+
+            input {
+              height: 100%;
+              width: 150px;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .scroll-wrapper {
+          overflow-x: auto;
+          padding: 20px;
         }
       }
     }

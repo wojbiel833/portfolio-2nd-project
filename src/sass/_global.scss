@@ -37,3 +37,24 @@ section {
   width: 80vw;
   box-shadow: 0 0 1em $sidebar-main-color;
 }
+
+@media (max-width: 767px) {
+  section {
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+}
+
+@media (max-width: 1025px) {
+  // section {
+  //   width: calc(100% - 40px);
+  //   margin: auto;
+  // }
+}
+
+@media (min-width: 1026px) {
+  // section {
+  //   width: calc(100% - 40px);
+  //   margin: auto;
+  // }
+}

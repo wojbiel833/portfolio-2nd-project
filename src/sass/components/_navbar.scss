@@ -34,9 +34,20 @@
   }
 }
 
-@media (max-width: 767px) {
-  nav {
+@media (min-width: 0px) and (max-width: 767px) {
+  .navbar.sticky-top {
+    height: 100px;
     width: 100%;
+    // display: none;
+  }
+
+  #sidebar-show {
+    height: 60px;
+  }
+}
+
+@media (min-width: 991px) {
+  #sidebar-show {
     display: none;
   }
 }
