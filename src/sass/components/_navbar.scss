@@ -36,18 +36,20 @@
 
 @media (min-width: 0px) and (max-width: 767px) {
   .navbar.sticky-top {
-    height: 100px;
+    height: 70px;
     width: 100%;
     // display: none;
   }
 
   #sidebar-show {
-    height: 60px;
+    height: 40px;
   }
 }
 
-@media (min-width: 991px) {
-  #sidebar-show {
-    display: none;
+@media (min-width: 768px) and (min-width: 991px) {
+  .navbar.sticky-top {
+    height: 70px;
+    width: 100%;
+    // display: none;
   }
 }

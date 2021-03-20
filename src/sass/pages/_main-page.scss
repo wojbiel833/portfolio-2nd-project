@@ -53,6 +53,7 @@
 
     img {
       margin: 50px 0;
+      width: 700px;
     }
   }
 }
@@ -145,5 +146,131 @@
         }
       }
     }
+  }
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  .graph-part {
+    // display: inline;
+
+    .date-picker {
+      .date-inputs {
+        min-width: 320px;
+        left: 51%;
+
+        input {
+          height: 100%;
+          width: 100px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .graph-part {
+    // display: inline;
+
+    .date-picker {
+      .date-inputs {
+        min-width: 320px;
+
+        input {
+          height: 100%;
+          width: 100px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .graph {
+      img {
+        width: 450px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and(max-width: 991px) {
+  .graph-part {
+    // display: inline;
+
+    .date-picker {
+      .date-inputs {
+        min-width: 420px;
+
+        input {
+          height: 100%;
+          width: 150px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .graph {
+      img {
+        width: 430px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and(max-width: 1024px) {
+  .graph-part {
+    // display: inline;
+
+    .date-picker {
+      .date-inputs {
+        left: 53%;
+        min-width: 550px;
+
+        input {
+          height: 100%;
+          width: 200px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .graph {
+      img {
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .graph-part {
+    // display: inline;
+
+    .date-picker {
+      .date-inputs {
+        // left: 53%;
+        min-width: 550px;
+
+        input {
+          height: 100%;
+          width: 200px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    // .graph {
+    //   img {
+    //     width: 600px;
+    //   }
+    // }
   }
 }
