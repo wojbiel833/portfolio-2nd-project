@@ -129,11 +129,12 @@
 
         .date-picker {
           .date-inputs {
-            width: 320px;
+            width: 285px;
+            left: 51%;
 
             input {
               height: 100%;
-              width: 100px;
+              width: 80px;
               border-radius: 5px;
             }
           }
@@ -143,10 +144,18 @@
           overflow-x: auto;
           padding: 20px;
         }
+        .detail-pages {
+          .page-number {
+            a {
+              padding: 0;
+            }
+          }
+        }
       }
     }
   }
 }
+
 @media (min-width: 500px) and(max-width: 767px) {
   .details {
     .details-field {
@@ -160,7 +169,84 @@
             input {
               height: 100%;
               width: 150px;
-              border-radius: 5px;
+            }
+          }
+        }
+
+        .scroll-wrapper {
+          overflow-x: auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and(max-width: 991px) {
+  .details {
+    .details-field {
+      .details-table {
+        display: inline;
+
+        .date-picker {
+          .date-inputs {
+            width: 450px;
+            left: 66%;
+
+            input {
+              height: 100%;
+              width: 100px;
+            }
+          }
+        }
+
+        .scroll-wrapper {
+          overflow-x: auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and(max-width: 1024px) {
+  .details {
+    .details-field {
+      .details-table {
+        display: inline;
+
+        .date-picker {
+          .date-inputs {
+            width: 600px;
+            left: 66%;
+
+            input {
+              height: 100%;
+              width: 150px;
+            }
+          }
+        }
+
+        .scroll-wrapper {
+          overflow-x: auto;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .details {
+    .details-field {
+      .details-table {
+        display: inline;
+
+        .date-picker {
+          .date-inputs {
+            input {
+              height: 100%;
+              width: 180px;
             }
           }
         }
