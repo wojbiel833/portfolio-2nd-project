@@ -34,7 +34,6 @@
 
                         <button type="button" id="sidebar-show" class="btn btn-info" data-effect="st-effect-14">
                             <i class="fas fa-align-left"></i>
-                            <span>Toggle Sidebar</span>
                         </button>
 
                     </div>
@@ -59,7 +58,7 @@
         </nav>
 
         <!-- Sidebar -->
-        <div id="st-container" class="st-container hidden">
+        <div id="st-container" class="st-container ">
             <div class="st-pusher">
                 <div class="sidebar-wrapper st-menu st-effect-14 " id="menu-14">
                     <nav id="sidebar">
@@ -125,7 +124,7 @@
         </div>
         <!-- Main page -->
 
-             <!-- <section class="graph-part">
+             <section class="graph-part">
                 <h3>GENERAL STATISTIC</h3>
                 <div class='date-picker'>
                     <div class="date-inputs">
@@ -238,11 +237,11 @@
                           <a href="#" class="add-button">+ add new</a>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Links -->
 
-            <!-- <section class="links-part">
+            <section class="links-part">
                 <h3>LINKS</h3>
                 <div class="links">
                     <div class="links-table">
@@ -341,11 +340,11 @@
                           <a href="#" class="add-button">+ add new</a>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Banners -->
 
-            <!-- <section class="links-part">
+            <section class="links-part">
                 <h3>BANNERS</h3>
                 <div class="links">
                     <div class="links-table">
@@ -444,42 +443,42 @@
                           <a href="#" class="add-button">+ add new</a>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Form -->
 
-            <!-- <section class="form">
+            <section class="form">
                 <h3>PERSONAL DATA</h3>
                 <form class="user-data">
                     <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Leonardo">
+                    <input type="text" id="name" name="name" placeholder="Leonardo" minlength="2" required autocomplete>
                     </div>
                     <div>
                     <label for="surname">Surame:</label>
-                    <input type="text" id="surname" name="surname" placeholder="Dicaprio">
+                    <input type="text" id="surname" name="surname" placeholder="Dicaprio" minlength="2" required autocomplete>
                     </div>
                     <div>
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="leonardodicaprio@gmail.com">
+                    <input type="email" id="email" name="email" placeholder="leonardodicaprio@gmail.com" required autocomplete>
                     </div>
                     <div>
                     <label for="phone-number">Phone number:</label>
-                    <input type="text" id="phone-number" name="phone-number" placeholder="+ 48 100 100 100">
+                    <input type="text" id="phone-number" name="phone-number" placeholder="+ 48 100 100 100" minlength="9" maxlength="12" autocomplete>
                     </div>
                 </form>
                 <form class="user-contact">
                     <div>
                     <label for="skype">Skype:</label>
-                    <input type="text" id="skype" name="skype" placeholder="Leonardo.D">
+                    <input type="text" id="skype" name="skype" placeholder="Leonardo.D" minlength="3">
                     </div>
                     <div>
                     <label for="icq">ICQ:</label>
-                    <input type="text" id="icq" name="icq">
+                    <input type="text" id="icq" name="icq" minlength="3">
                     </div>
                     <div>
                     <label for="msn">Msn:</label>
-                    <input type="text" id="msn" name="msn">
+                    <input type="text" id="msn" name="msn" minlength="3">
                     </div>
                 </form>
                 <form class="wallet">
@@ -490,22 +489,22 @@
                 </form>
                 <form class="set-password">
                     <div>
-                    <label for="password">Password:</label>
-                    <input type="text" id="password" name="password">
+                    <label for="password">Password (min. 8):</label>
+                    <input type="password" id="password" name="password" minlength="8">
                     </div>
                     <div>
                     <label for="password-repeat">Repeat:</label>
-                    <input type="text" id="password-repeat" name="password-repeat">
+                    <input type="password" id="password-repeat" name="password-repeat" minlength="8">
                     </div>
                 </form>
                 <div>
                     <a href="#" class="save-button">Save</a>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Details -->
 
-            <!-- <section class="details">
+            <section class="details">
                 <h3>DETAIL STATISTIC</h3>
                 <div class="details-field">
                     <div class="details-table">
@@ -656,11 +655,11 @@
                           </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- Payouts -->
 
-            <!-- <section class="details">
+            <section class="details">
                 <h3>PAYOUT HISTORY</h3>
                 <div class="details-field">
                     <div class="details-table">
@@ -767,11 +766,11 @@
                           </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
 
             <!-- New postback -->
 
-            <!-- <section class="new-postback">
+            <section class="new-postback">
                 <h3>NEW POSTBACK</h3>
                 <div class="postback-parameters">
                     <p>You can insert some parameters in this postback:</p>
@@ -841,7 +840,7 @@
                     </div>
                 </div>
                 <button class="create-pixel-btn">Create Pixel</button>
-            </section> -->
+            </section>
 
             <!-- POPUPS  -->
 

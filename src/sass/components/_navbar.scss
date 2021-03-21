@@ -1,5 +1,15 @@
 .navbar.sticky-top {
   border-bottom: 1px solid $sidebar-main-color;
+  div {
+    .navbar {
+      .container-fluid {
+        button {
+          // position: absolute;
+          // left: 200%;
+        }
+      }
+    }
+  }
 }
 
 .nav-item {

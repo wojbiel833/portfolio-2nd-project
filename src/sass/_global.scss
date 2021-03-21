@@ -32,7 +32,7 @@ body {
 
 section {
   width: calc(100% - 330px);
-  margin: 20px 40px 20px 280px;
+  margin: 20px 0 20px 280px;
   background-color: #fff;
   box-shadow: 0 0 1em $sidebar-main-color;
 }
@@ -40,6 +40,8 @@ section {
 @media (max-width: 767px) {
   section {
     width: calc(100% - 40px);
+    // margin: 0;
+
     margin: auto;
   }
 }

@@ -208,6 +208,8 @@
           li {
             text-align: center;
             padding: 30px;
+            margin: 0;
+            width: calc(100% - 60px);
 
             &:first-of-type {
               margin-top: 50px;
@@ -234,7 +236,7 @@
 
           .sidebar-label {
             font-size: 40px;
-            margin: 60px;
+            margin: 40px;
           }
 
           li {
