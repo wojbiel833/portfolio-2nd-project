@@ -6,7 +6,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 60%;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -354,7 +354,8 @@
             justify-content: space-between;
             align-items: center;
             margin: 10px;
-            width: 80%;
+            width: 70%;
+            font-weight: 700;
 
             i {
               margin: 10px;
@@ -525,6 +526,7 @@
         justify-content: space-between;
         margin: 10px;
         width: 90%;
+        font-weight: 700;
 
         i {
           margin: 10px;
@@ -670,92 +672,268 @@
     .generated-link {
       margin: 20px 0 10px;
     }
+  }
 
-    .quit-popup {
-      width: 80%;
+  .add-banners-popup {
+    width: 100%;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 100%;
+        label {
+          position: relative;
+        }
+
+        input,
+        select {
+          width: calc(100% - 40px);
+          margin: 25px 0 10px 15px;
+        }
+      }
+      .select-language {
+        width: 100%;
+        border-bottom: 1px $sidebar-items-font-color solid;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+    }
+
+    .banner-details {
+      label {
+        position: relative;
+
+        &:first-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      input,
+      select {
+        width: calc(100% - 40px);
+        margin: 25px 0 10px 15px;
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .select-banners {
+      border-bottom: 1px $sidebar-items-font-color solid;
+    }
+
+    .select-banners,
+    .select-websites {
+      height: 400px;
+      width: 100%;
+      padding-bottom: 20px;
+
+      .banner,
+      .b-website {
+        flex-flow: row wrap;
+        flex: 0 0 100%;
+        label {
+          width: 70%;
+        }
+      }
+    }
+
+    .generated-link {
+      input {
+        width: calc(100% - 180px);
+      }
+
+      .copy-btn {
+        font-size: 12px;
+      }
+
+      .enter-btn {
+        font-size: 12px;
+      }
     }
   }
 
-  @media (min-width: 500px) and(max-width: 767px) {
-    .login-popup {
-      width: 90%;
-
-      .login-details {
-        margin: 0;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        input {
-          margin: 10px 0 20px;
-        }
-        .login-btn {
-          margin: 10px;
-        }
-      }
-    }
-
-    .personal-chat-popup {
-      width: 90%;
-
-      .post-message {
-        input {
-          width: 75%;
-        }
-      }
-    }
-
-    .add-links-popup {
-      width: 100%;
-      height: auto;
-
-      .select-field {
-        .select-scheme-name {
-          border-bottom: 1px $sidebar-items-font-color solid;
-          width: 100%;
-
-          input,
-          select {
-            width: calc(100% - 40px);
-            margin-bottom: 20px;
-          }
-        }
-        .select-language {
-          width: 100%;
-
-          label {
-            margin: 5px 0 0 15px;
-          }
-
-          select {
-            width: calc(100% - 40px);
-            margin: 15px;
-          }
-        }
-        .select-websites {
-          height: 400px;
-
-          .websites {
-            flex-flow: row wrap;
-            flex: 0 0 100%;
-
-            .website {
-              width: 100%;
-              flex-flow: row nowrap;
-            }
-          }
-        }
-      }
-      .generated-link {
-        margin: 20px 0 10px;
-      }
-    }
-
-    .quit-popup {
-      width: 50%;
-    }
+  .quit-popup {
+    width: 80%;
   }
 }
+
+@media (min-width: 500px) and(max-width: 767px) {
+  .login-popup {
+    width: 60%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      input {
+        margin: 10px 0 20px;
+      }
+      .login-btn {
+        margin: 10px;
+      }
+    }
+  }
+
+  .personal-chat-popup {
+    width: 90%;
+
+    .post-message {
+      input {
+        width: 75%;
+      }
+    }
+  }
+
+  .add-links-popup {
+    width: 100%;
+    height: auto;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 100%;
+
+        input,
+        select {
+          width: calc(100% - 40px);
+          margin-bottom: 20px;
+        }
+      }
+      .select-language {
+        width: 100%;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+      .select-websites {
+        height: 400px;
+
+        .websites {
+          flex-flow: row wrap;
+          flex: 0 0 100%;
+
+          .website {
+            justify-content: space-between;
+            width: 100%;
+            flex-flow: row nowrap;
+          }
+        }
+      }
+    }
+    .generated-link {
+      margin: 20px 0 10px;
+    }
+  }
+
+  .add-banners-popup {
+    width: 100%;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 100%;
+        label {
+          position: relative;
+        }
+
+        input,
+        select {
+          width: calc(100% - 40px);
+          margin: 25px 0 10px 15px;
+        }
+      }
+      .select-language {
+        width: 100%;
+        border-bottom: 1px $sidebar-items-font-color solid;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+    }
+
+    .banner-details {
+      label {
+        position: relative;
+
+        &:first-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      input,
+      select {
+        width: calc(100% - 40px);
+        margin: 25px 0 10px 15px;
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .select-banners {
+      border-bottom: 1px $sidebar-items-font-color solid;
+    }
+
+    .select-banners,
+    .select-websites {
+      height: 400px;
+      width: 100%;
+      padding-bottom: 20px;
+
+      .banner,
+      .b-website {
+        flex-flow: row wrap;
+        flex: 0 0 100%;
+        label {
+          width: 70%;
+        }
+      }
+    }
+
+    .generated-link {
+      input {
+        width: calc(100% - 200px);
+      }
+
+      .copy-btn {
+        font-size: 14px;
+      }
+
+      .enter-btn {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .quit-popup {
+    width: 50%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .login-popup {
     width: 85%;
@@ -830,6 +1008,80 @@
     }
     .generated-link {
       margin: 20px 0 10px;
+    }
+  }
+
+  .add-banners-popup {
+    width: 100%;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 85%;
+
+        input,
+        select {
+          width: calc(50% - 40px);
+        }
+      }
+      .select-language {
+        width: 15%;
+        border-bottom: 1px $sidebar-items-font-color solid;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+    }
+
+    .banner-details {
+      input,
+      select {
+        width: calc(33% - 40px);
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .select-banners {
+      border-bottom: 1px $sidebar-items-font-color solid;
+    }
+
+    .select-banners,
+    .select-websites {
+      height: 400px;
+      width: 50%;
+      padding-bottom: 20px;
+
+      .banner,
+      .b-website {
+        flex-flow: row wrap;
+        flex: 0 0 50%;
+        label {
+          width: 70%;
+        }
+      }
+    }
+
+    .generated-link {
+      input {
+        width: calc(100% - 200px);
+      }
+
+      .copy-btn {
+        font-size: 20px;
+      }
+
+      .enter-btn {
+        font-size: 20px;
+      }
     }
   }
 
