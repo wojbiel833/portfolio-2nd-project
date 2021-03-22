@@ -494,7 +494,7 @@
                     </div>
                     <div>
                     <label for="password-repeat">Repeat:</label>
-                    <input type="password" id="password-repeat" name="password-repeat" minlength="8">
+                    <input type="password-repeat" id="password-repeat" name="password-repeat" minlength="8">
                     </div>
                 </form>
                 <div>
@@ -844,22 +844,22 @@
 
             <!-- POPUPS  -->
 
-            <div class="popup-overlay hidden"></div>
+            <div class="popup-overlay hidden">
 
-            <!-- login  -->
+                <!-- login  -->
 
-            <div class="login-popup hidden">
-                <h3>LOGIN</h3>
-                <div class="login-details">
-                    <input type="text" id="username" name="username" placeholder="Username">
-                    <!-- <i class="far fa-user"></i> -->
-                    <input type="text" id="password" name="password" placeholder="Password">
-                    <!-- <i class="fas fa-key"></i> -->
-                    <button class="login-btn">Enter</button>
+                <div class="login-popup hidden">
+                    <h3>LOGIN</h3>
+                    <div class="login-details">
+                        <input type="text" id="username" name="username" placeholder="Username">
+                        <!-- <i class="far fa-user"></i> -->
+                        <input type="text" id="login-password" name="password" placeholder="Password">
+                        <!-- <i class="fas fa-key"></i> -->
+                        <button class="login-btn">Enter</button>
+                    </div>
                 </div>
-            </div>
 
-            <!-- quit -->
+                <!-- quit -->
 
                 <div class="quit-popup hidden">
                     <p>Do you really want to quit?</p>
@@ -1252,8 +1252,9 @@
                             <button class="enter-btn">Enter</button>
                         </div>
                     </div>
-
-
+                </div>
+            </div>
+            
         <script src="js/script.js" type="module"></script>
     </body>
     </html>

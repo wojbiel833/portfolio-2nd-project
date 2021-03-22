@@ -5,6 +5,10 @@ import { select, classNames } from './settings.js';
 
 const logOutBtn = document.querySelector(select.buttons.logOutBtn);
 // console.log(logOutBtn);
+const closeWindowBtns = document.querySelectorAll(
+  select.buttons.closeWindowBtns
+);
+console.log(closeWindowBtns);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
 const sidebarShow = document.getElementById(select.buttons.sidebarShow);
@@ -20,6 +24,8 @@ const sidebarBanners = document.getElementById(select.sidebar.banners);
 
 const popUpOverlay = document.querySelector(select.components.popUpOverlay);
 // console.log(popUpOverlay);
+const allModals = document.querySelectorAll(select.components.allModals);
+// console.log(allModals);
 const quitPopUp = document.querySelector(select.components.quitPopUp);
 // console.log(quitPopUp);
 const chatPopUp = document.querySelector(select.components.chatPopUp);
@@ -66,20 +72,57 @@ function closeMenu(el) {
   }
 }
 // Functions
-const addHidden = element => element.classList.add(classNames.popUps.show);
-const removeHidden = element =>
-  element.classList.remove(classNames.popUps.show);
 
+const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
+
+function openModal(modal) {
+  allModals.forEach(function (modal) {
+    modal.classList.remove(classNames.popUps.hidden);
+  });
+  popUpOverlay.remove(classNames.popUps.hidden);
+  modal.classList.add('show');
+}
+
+const addHidden = element => element.classList.add(classNames.popUps.hidden);
+
+const removeHidden = element =>
+  element.classList.remove(classNames.popUps.hidden);
+
+const closeAllModals = function () {
+  addHidden(popUpOverlay);
+  addHidden(chatPopUp);
+  addHidden(quitPopUp);
+  addHidden(linksPopUp);
+  addHidden(bannersPopUp);
+  // addHidden(loginPopUp);
+};
 // Event handlers
+
+document.addEventListener('keydown', function (e) {
+  // console.log(e.key);
+
+  if (e.key === 'Escape') {
+    closeAllModals();
+  }
+});
+
+popUpOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeAllModals();
+});
+
+closeWindowBtns.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeAllModals();
+  });
+});
 
 sidebarShow.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(sidebar);
   removeHidden(navbarItems);
   removeHidden(sidebarHide);
-  // sidebar.classList.remove(classNames.popUps.show);
-  // navbarItems.classList.remove(classNames.popUps.show);
-  // sidebarHide.classList.remove(classNames.popUps.show);
 });
 
 sidebarHide.addEventListener('click', function (e) {
@@ -87,39 +130,27 @@ sidebarHide.addEventListener('click', function (e) {
   addHidden(sidebar);
   addHidden(navbarItems);
   addHidden(sidebarHide);
-  // sidebar.classList.add(classNames.popUps.show);
-  // navbarItems.classList.add(classNames.popUps.show);
-  // sidebarHide.classList.add(classNames.popUps.show);
 });
 
 logOutBtn.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(quitPopUp);
   removeHidden(popUpOverlay);
-  //   quitPopUp.classList.remove(classNames.popUps.show);
-  //   popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(chatPopUp);
   removeHidden(popUpOverlay);
-  // chatPopUp.classList.remove(classNames.popUps.show);
-  // popUpOverlay.classList.remove(classNames.popUps.show);
 });
-
 sidebarLinks.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(linksPopUp);
   removeHidden(popUpOverlay);
-  // linksPopUp.classList.remove(classNames.popUps.show);
-  // popUpOverlay.classList.remove(classNames.popUps.show);
 });
 
 sidebarBanners.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(bannersPopUp);
   removeHidden(popUpOverlay);
-  // bannersPopUp.classList.remove(classNames.popUps.show);
-  // popUpOverlay.classList.remove(classNames.popUps.show);
 });
