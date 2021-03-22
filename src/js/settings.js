@@ -1,14 +1,18 @@
 export const select = {
   sidebar: {
-    links: 'links',
-    banners: 'banners',
+    general: '#general',
+    details: '#details',
+    links: '#links',
+    banners: '#banners',
+    personalData: '#personal-data',
+    payouts: '#payouts',
+    postback: '#postback',
   },
   buttons: {
     logOutBtn: '.log-out-btn',
     closeWindowBtns: '.close-window-btn a',
     chatButtons: '.sidebar-wrapper .friends li a',
     sidebarShow: '#sidebar-show',
-    sidebarHide: '.sidebar-hide',
   },
   components: {
     allModals: '.popup-overlay  > *',

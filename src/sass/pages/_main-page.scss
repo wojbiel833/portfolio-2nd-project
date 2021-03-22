@@ -1,166 +1,48 @@
-.graph-part {
-  h3 {
-    border-bottom: 1px $body-color solid;
-    padding: 10px 15px;
-  }
-  .date-picker {
-    position: relative;
-    height: 100px;
-
-    .date-inputs {
-      position: absolute;
-      height: 45px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 500px;
-
-      input {
-        height: 100%;
-        width: 200px;
-        border-radius: 5px;
-      }
-
-      .fa-calendar-alt {
-        color: $paragraph-font-color;
-        font-size: 20px;
-        margin-left: 20px;
-
-        &:hover {
-          color: $sidebar-main-color;
-        }
-      }
-
-      .fa-undo-alt {
-        padding: 10px;
-        background-color: $main-color;
-        color: #fff;
-        font-size: 20px;
-        margin-left: 20px;
-        border-radius: 5px;
-
-        &:hover {
-          background-color: darken($color: $main-color, $amount: 10%);
-        }
-      }
-    }
-  }
-
-  .graph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      margin: 50px 0;
-      width: 700px;
-    }
-  }
-}
-
-.links-part {
-  margin-top: 20px;
-  padding-bottom: 50px;
-
-  h3 {
-    border-bottom: 1px $body-color solid;
-    padding: 10px 15px;
-  }
-
-  .links {
-    .links-table {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .add-button {
-        text-decoration: none;
-        padding: 10px;
-        background-color: $main-color;
-        color: #fff;
-        font-size: 20px;
-        margin: 20px 30%;
-        border-radius: 5px;
-        width: 110px;
-        text-align: center;
-
-        &:hover {
-          background-color: darken($color: $main-color, $amount: 10%);
-        }
-      }
-
-      table {
-        .link-row {
-          border-top: 1px $sidebar-items-font-color solid;
-
-          &:last-of-type {
-            border-bottom: 1px $sidebar-items-font-color solid;
-          }
-
-          &:hover {
-            background-color: $table-hover;
-            cursor: pointer;
-          }
-
-          &:hover .fa-link,
-          &:hover .fa-trash-alt {
-            display: block;
-          }
-        }
-
-        .name {
-          padding-left: 10px;
-          font-family: $sidebar-items-font;
-          font-weight: 700;
-          width: 300px;
-          height: 70px;
-        }
-
-        .link {
-          padding-left: 10px;
-          font-family: $sidebar-items-font;
-          width: 300px;
-          height: 70px;
-        }
-
-        .icons {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          width: 100px;
-          height: 70px;
-
-          a {
-            text-decoration: none;
-          }
-
-          .fa-link {
-            display: none;
-            color: lighten($color: $main-color, $amount: 20%);
-          }
-
-          .fa-trash-alt {
-            display: none;
-            color: $sidebar-items-font-color;
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 0px) and (max-width: 499px) {
+div {
   .graph-part {
-    // display: inline;
-
+    h3 {
+      border-bottom: 1px $body-color solid;
+      padding: 10px 15px;
+    }
     .date-picker {
+      position: relative;
+      height: 100px;
+
       .date-inputs {
-        min-width: 320px;
-        left: 51%;
+        position: absolute;
+        height: 45px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 500px;
 
         input {
           height: 100%;
-          width: 100px;
+          width: 200px;
           border-radius: 5px;
+        }
+
+        .fa-calendar-alt {
+          color: $paragraph-font-color;
+          font-size: 20px;
+          margin-left: 20px;
+
+          &:hover {
+            color: $sidebar-main-color;
+          }
+        }
+
+        .fa-undo-alt {
+          padding: 10px;
+          background-color: $main-color;
+          color: #fff;
+          font-size: 20px;
+          margin-left: 20px;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: darken($color: $main-color, $amount: 10%);
+          }
         }
       }
     }
@@ -171,106 +53,230 @@
       align-items: center;
 
       img {
-        width: 300px;
+        margin: 50px 0;
+        width: 700px;
+      }
+    }
+  }
+
+  .links-part {
+    margin-top: 20px;
+    padding-bottom: 50px;
+
+    h3 {
+      border-bottom: 1px $body-color solid;
+      padding: 10px 15px;
+    }
+
+    .links {
+      .links-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .add-button {
+          text-decoration: none;
+          padding: 10px;
+          background-color: $main-color;
+          color: #fff;
+          font-size: 20px;
+          margin: 20px 30%;
+          border-radius: 5px;
+          width: 110px;
+          text-align: center;
+
+          &:hover {
+            background-color: darken($color: $main-color, $amount: 10%);
+          }
+        }
+
+        table {
+          .link-row {
+            border-top: 1px $sidebar-items-font-color solid;
+
+            &:last-of-type {
+              border-bottom: 1px $sidebar-items-font-color solid;
+            }
+
+            &:hover {
+              background-color: $table-hover;
+              cursor: pointer;
+            }
+
+            &:hover .fa-link,
+            &:hover .fa-trash-alt {
+              display: block;
+            }
+          }
+
+          .name {
+            padding-left: 10px;
+            font-family: $sidebar-items-font;
+            font-weight: 700;
+            width: 300px;
+            height: 70px;
+          }
+
+          .link {
+            padding-left: 10px;
+            font-family: $sidebar-items-font;
+            width: 300px;
+            height: 70px;
+          }
+
+          .icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100px;
+            height: 70px;
+
+            a {
+              text-decoration: none;
+            }
+
+            .fa-link {
+              display: none;
+              color: lighten($color: $main-color, $amount: 20%);
+            }
+
+            .fa-trash-alt {
+              display: none;
+              color: $sidebar-items-font-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 0px) and (max-width: 499px) {
+  div {
+    .graph-part {
+      // display: inline;
+
+      .date-picker {
+        .date-inputs {
+          min-width: 320px;
+          left: 51%;
+
+          input {
+            height: 100%;
+            width: 100px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .graph {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 300px;
+        }
       }
     }
   }
 }
 
 @media (min-width: 500px) and (max-width: 767px) {
-  .graph-part {
-    // display: inline;
+  div {
+    .graph-part {
+      // display: inline;
 
-    .date-picker {
-      .date-inputs {
-        min-width: 320px;
+      .date-picker {
+        .date-inputs {
+          min-width: 320px;
 
-        input {
-          height: 100%;
-          width: 100px;
-          border-radius: 5px;
+          input {
+            height: 100%;
+            width: 100px;
+            border-radius: 5px;
+          }
         }
       }
-    }
 
-    .graph {
-      img {
-        width: 450px;
+      .graph {
+        img {
+          width: 450px;
+        }
       }
     }
   }
 }
 
 @media (min-width: 768px) and(max-width: 991px) {
-  .graph-part {
-    // display: inline;
+  div {
+    .graph-part {
+      // display: inline;
 
-    .date-picker {
-      .date-inputs {
-        min-width: 420px;
+      .date-picker {
+        .date-inputs {
+          min-width: 420px;
 
-        input {
-          height: 100%;
-          width: 150px;
-          border-radius: 5px;
+          input {
+            height: 100%;
+            width: 150px;
+            border-radius: 5px;
+          }
         }
       }
-    }
 
-    .graph {
-      img {
-        width: 430px;
+      .graph {
+        img {
+          width: 430px;
+        }
       }
     }
   }
 }
 
 @media (min-width: 992px) and(max-width: 1024px) {
-  .graph-part {
-    // display: inline;
+  div {
+    .graph-part {
+      // display: inline;
 
-    .date-picker {
-      .date-inputs {
-        left: 53%;
-        min-width: 550px;
+      .date-picker {
+        .date-inputs {
+          left: 53%;
+          min-width: 550px;
 
-        input {
-          height: 100%;
-          width: 200px;
-          border-radius: 5px;
+          input {
+            height: 100%;
+            width: 200px;
+            border-radius: 5px;
+          }
         }
       }
-    }
 
-    .graph {
-      img {
-        width: 600px;
+      .graph {
+        img {
+          width: 600px;
+        }
       }
     }
   }
 }
 
 @media (min-width: 1025px) {
-  .graph-part {
-    // display: inline;
+  div {
+    .graph-part {
+      // display: inline;
 
-    .date-picker {
-      .date-inputs {
-        // left: 53%;
-        min-width: 550px;
+      .date-picker {
+        .date-inputs {
+          // left: 53%;
+          min-width: 550px;
 
-        input {
-          height: 100%;
-          width: 200px;
-          border-radius: 5px;
+          input {
+            height: 100%;
+            width: 200px;
+            border-radius: 5px;
+          }
         }
       }
     }
-
-    // .graph {
-    //   img {
-    //     width: 600px;
-    //   }
-    // }
   }
 }

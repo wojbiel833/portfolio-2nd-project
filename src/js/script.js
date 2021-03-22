@@ -12,9 +12,9 @@ console.log(closeWindowBtns);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
 
-const sidebarLinks = document.getElementById(select.sidebar.links);
+const sidebarLinks = document.querySelector(select.sidebar.links);
 // console.log(sidebarLinks);
-const sidebarBanners = document.getElementById(select.sidebar.banners);
+const sidebarBanners = document.querySelector(select.sidebar.banners);
 // console.log(sidebarBanners);
 
 // Sections / Components
@@ -46,6 +46,34 @@ function openModal(modal) {
   popUpOverlay.remove(classNames.popUps.hidden);
   modal.classList.add('show');
 }
+
+const sidebarChangeSubpage = function (event) {
+  event.preventDefault();
+  console.log('click');
+  const clickedElement = this;
+  /* [DONE] remove class 'active' from all article links  */
+  const hiddenElements = document.querySelectorAll('.titles a.active');
+
+  // for (let activeLink of activeLinks) {
+  //   activeLink.classList.remove('active');
+  // }
+  // /* [DONE] add class 'active' to the clicked link */
+  // clickedElement.classList.add('active');
+  // /* [DONE] remove class 'active' from all articles */
+  // const activeArticles = document.querySelectorAll('.posts .post.active');
+
+  // for (let activeArticle of activeArticles) {
+  //   activeArticle.classList.remove('active');
+  // }
+  // /* [DONE] get 'href' attribute from the clicked link */
+  // const articleSelector = clickedElement.getAttribute('href');
+  // /* [DONE] find the correct article using the selector (value of 'href' attribute) */
+  // const targetArticle = document.querySelector(articleSelector);
+  // /* [DONE] add class 'active' to the correct article */
+  // targetArticle.classList.add('active');
+};
+
+document.body.addEventListener('click', sidebarChangeSubpage);
 
 const addHidden = element => element.classList.add(classNames.popUps.hidden);
 
