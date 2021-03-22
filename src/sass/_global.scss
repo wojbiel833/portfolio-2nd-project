@@ -37,12 +37,11 @@ section {
   box-shadow: 0 0 1em $sidebar-main-color;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   section {
     width: calc(100% - 40px);
-    // margin: 0;
-
     margin: auto;
+    margin-top: 20px;
   }
 }
 

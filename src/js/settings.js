@@ -7,13 +7,13 @@ export const select = {
     logOutBtn: '.log-out-btn',
     closeWindowBtns: '.close-window-btn a',
     chatButtons: '.sidebar-wrapper .friends li a',
-    sidebarShow: 'sidebar-show',
+    sidebarShow: '#sidebar-show',
     sidebarHide: '.sidebar-hide',
   },
   components: {
     allModals: '.popup-overlay  > *',
     navbarItems: '.from-navbar',
-    sidebar: '.sidebar-wrapper',
+    sidebar: '.st-container',
     linksPopUp: '.add-links-popup',
     bannersPopUp: '.add-banners-popup',
     chatPopUp: '.popup-overlay .personal-chat-popup',
@@ -25,5 +25,8 @@ export const select = {
 export const classNames = {
   popUps: {
     hidden: 'hidden',
+  },
+  sidebar: {
+    active: 'active',
   },
 };

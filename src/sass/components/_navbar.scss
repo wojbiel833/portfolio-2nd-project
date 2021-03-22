@@ -46,9 +46,7 @@
 
 @media (min-width: 0px) and (max-width: 767px) {
   .navbar.sticky-top {
-    height: 70px;
-    width: 100%;
-    // display: none;
+    display: none;
   }
 
   #sidebar-show {
@@ -56,10 +54,8 @@
   }
 }
 
-@media (min-width: 768px) and (min-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .navbar.sticky-top {
-    height: 70px;
-    width: 100%;
-    // display: none;
+    display: none;
   }
 }

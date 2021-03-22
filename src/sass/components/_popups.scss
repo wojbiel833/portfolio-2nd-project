@@ -85,6 +85,10 @@
         text-decoration: none;
         color: $sidebar-items-font-color;
         cursor: pointer;
+
+        &:hover {
+          color: $sidebar-items-font-color;
+        }
       }
     }
   }
