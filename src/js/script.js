@@ -19,10 +19,10 @@ const sidebarPayouts = document.getElementById(select.sidebar.payouts);
 const sidebarPostback = document.getElementById(select.sidebar.postback);
 // console.log(sidebarPostback);
 
-const logInBtn = document.querySelector(select.buttons.logInBtn);
-console.log(logInBtn);
+const logInBtns = document.querySelectorAll(select.buttons.logInBtn);
+console.log(logInBtns);
 const logOutBtns = document.querySelectorAll(select.buttons.logOutBtn);
-// console.log(logOutBtn);
+// console.log(logOutBtns);
 const closeWindowBtns = document.querySelectorAll(
   select.buttons.closeWindowBtns
 );
@@ -111,17 +111,25 @@ closeWindowBtns.forEach(function (btn) {
   });
 });
 
-popUpOverlay.addEventListener('click', function (e) {
-  e.preventDefault();
-  closeAllModals();
-});
-
 logOutBtns.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
     removeHidden(quitPopUp);
     removeHidden(popUpOverlay);
   });
+});
+
+logInBtns.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    removeHidden(logInPopUp);
+    removeHidden(popUpOverlay);
+  });
+});
+
+popUpOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeAllModals();
 });
 
 sidebarGeneral.addEventListener('click', function (e) {
@@ -156,14 +164,12 @@ sidebarPersonalData.addEventListener('click', function (e) {
 });
 
 sidebarPayouts.addEventListener('click', function (e) {
-  console.log('click');
   e.preventDefault();
   hidePages();
   removeHidden(payoutPage);
 });
 
 sidebarPostback.addEventListener('click', function (e) {
-  console.log('click');
   e.preventDefault();
   hidePages();
   removeHidden(postbackPage);
@@ -172,12 +178,6 @@ sidebarPostback.addEventListener('click', function (e) {
 chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(chatPopUp);
-  removeHidden(popUpOverlay);
-});
-
-logInBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  removeHidden(logInPopUp);
   removeHidden(popUpOverlay);
 });
 

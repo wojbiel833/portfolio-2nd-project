@@ -2,7 +2,7 @@
   z-index: 5000;
   min-width: 250px;
   max-width: 250px;
-  // overflow: auto;
+  overflow: auto;
   position: relative;
   transition: 1s;
 
@@ -30,17 +30,6 @@
 
         #sidebar-show {
           background-color: $main-color;
-        }
-
-        .sidebar-hide {
-          position: absolute;
-          color: white;
-          z-index: 5001;
-          margin: 30px;
-          font-size: 40px;
-          top: 20%;
-          left: 80%;
-          border-radius: 10px;
         }
       }
 
