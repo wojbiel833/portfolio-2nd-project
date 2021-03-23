@@ -1,4 +1,4 @@
-.details {
+.section-details {
   h3 {
     padding: 20px;
     border-bottom: 1px $sidebar-items-font-color solid;
@@ -122,7 +122,7 @@
 }
 
 @media (min-width: 0px) and (max-width: 499px) {
-  .details {
+  .section-details {
     .details-field {
       .details-table {
         display: inline;
@@ -157,7 +157,7 @@
 }
 
 @media (min-width: 500px) and(max-width: 767px) {
-  .details {
+  .section-details {
     .details-field {
       .details-table {
         display: inline;
@@ -183,7 +183,7 @@
 }
 
 @media (min-width: 768px) and(max-width: 991px) {
-  .details {
+  .section-details {
     .details-field {
       .details-table {
         display: inline;
@@ -210,7 +210,7 @@
 }
 
 @media (min-width: 992px) and(max-width: 1024px) {
-  .details {
+  .section-details {
     .details-field {
       .details-table {
         display: inline;
@@ -237,7 +237,7 @@
 }
 
 @media (min-width: 1025px) {
-  .details {
+  .section-details {
     .details-field {
       .details-table {
         display: inline;

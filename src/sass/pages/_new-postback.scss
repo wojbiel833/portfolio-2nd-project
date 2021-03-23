@@ -1,4 +1,4 @@
-.new-postback {
+.section-new-postback {
   h3 {
     padding: 20px;
     border-bottom: 1px $sidebar-items-font-color solid;
@@ -154,7 +154,7 @@
 }
 
 @media (min-width: 0px) and (max-width: 499px) {
-  .new-postback {
+  .section-new-postback {
     h3 {
     }
 
@@ -240,7 +240,7 @@
 }
 
 @media (min-width: 500px) and(max-width: 767px) {
-  .new-postback {
+  .section-new-postback {
     h3 {
     }
 
@@ -326,7 +326,7 @@
 }
 
 @media (min-width: 768px) and(max-width: 991px) {
-  .new-postback {
+  .section-new-postback {
     h3 {
     }
 
@@ -411,7 +411,7 @@
   }
 }
 @media (min-width: 992px) and(max-width: 1024px) {
-  .new-postback {
+  .section-new-postback {
     .postback-status {
       flex-flow: column wrap;
 
@@ -444,7 +444,7 @@
   }
 }
 @media (min-width: 1025px) {
-  .new-postback {
+  .section-new-postback {
     .postback-status {
       flex-flow: row wrap;
 
