@@ -3,22 +3,24 @@ import { select, classNames } from './settings.js';
 
 // Elements
 const sidebarGeneral = document.getElementById(select.sidebar.general);
-console.log(sidebarGeneral);
+// console.log(sidebarGeneral);
 const sidebarDetails = document.getElementById(select.sidebar.details);
-console.log(sidebarDetails);
+// console.log(sidebarDetails);
 const sidebarLinks = document.getElementById(select.sidebar.links);
-console.log(sidebarLinks);
+// console.log(sidebarLinks);
 const sidebarBanners = document.getElementById(select.sidebar.banners);
-console.log(sidebarBanners);
+// console.log(sidebarBanners);
 const sidebarPersonalData = document.getElementById(
   select.sidebar.personalData
 );
-console.log(sidebarPersonalData);
+// console.log(sidebarPersonalData);
 const sidebarPayouts = document.getElementById(select.sidebar.payouts);
-console.log(sidebarPayouts);
+// console.log(sidebarPayouts);
 const sidebarPostback = document.getElementById(select.sidebar.postback);
-console.log(sidebarPostback);
+// console.log(sidebarPostback);
 
+const logInBtn = document.querySelector(select.buttons.logInBtn);
+console.log(logInBtn);
 const logOutBtns = document.querySelectorAll(select.buttons.logOutBtn);
 // console.log(logOutBtn);
 const closeWindowBtns = document.querySelectorAll(
@@ -35,18 +37,18 @@ const navbarItems = document.querySelector(select.components.navbarItems);
 // console.log(sidebar);
 // SUBPAGES
 const allSubpages = document.querySelectorAll(select.subpages.allSubpages);
-console.log(allSubpages);
+// console.log(allSubpages);
 
 const mainPage = document.querySelector(select.subpages.mainPage);
-console.log(mainPage);
+// console.log(mainPage);
 const detailsPage = document.querySelector(select.subpages.detailsPage);
 const formPage = document.querySelector(select.subpages.formPage);
-console.log(formPage);
-console.log(detailsPage);
+// console.log(formPage);
+// console.log(detailsPage);
 const payoutPage = document.querySelector(select.subpages.payoutPage);
-console.log(payoutPage);
+// console.log(payoutPage);
 const postbackPage = document.querySelector(select.subpages.postbackPage);
-console.log(postbackPage);
+// console.log(postbackPage);
 // POPUPS
 const popUpOverlay = document.querySelector(select.components.popUpOverlay);
 // console.log(popUpOverlay);
@@ -60,8 +62,8 @@ const linksPopUp = document.querySelector(select.components.linksPopUp);
 // console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
 // console.log(bannersPopUp);
-
-// FUNCTIONS
+const logInPopUp = document.querySelector(select.components.logInPopUp);
+console.log(logInPopUp);
 
 const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
 
@@ -84,7 +86,7 @@ const closeAllModals = function () {
   addHidden(quitPopUp);
   addHidden(linksPopUp);
   addHidden(bannersPopUp);
-  // addHidden(loginPopUp);
+  addHidden(logInPopUp);
 };
 const hidePages = function () {
   allSubpages.forEach(function (subpage) {
@@ -109,6 +111,11 @@ closeWindowBtns.forEach(function (btn) {
   });
 });
 
+popUpOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeAllModals();
+});
+
 logOutBtns.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -118,14 +125,12 @@ logOutBtns.forEach(function (btn) {
 });
 
 sidebarGeneral.addEventListener('click', function (e) {
-  console.log('click');
   e.preventDefault();
   hidePages();
   removeHidden(mainPage);
 });
 
 sidebarDetails.addEventListener('click', function (e) {
-  console.log('click');
   e.preventDefault();
   hidePages();
   removeHidden(detailsPage);
@@ -164,14 +169,15 @@ sidebarPostback.addEventListener('click', function (e) {
   removeHidden(postbackPage);
 });
 
-popUpOverlay.addEventListener('click', function (e) {
-  e.preventDefault();
-  closeAllModals();
-});
-
 chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(chatPopUp);
+  removeHidden(popUpOverlay);
+});
+
+logInBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  removeHidden(logInPopUp);
   removeHidden(popUpOverlay);
 });
 

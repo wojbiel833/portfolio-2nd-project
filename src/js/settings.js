@@ -19,6 +19,7 @@ export const select = {
     postbackPage: '.section-new-postback',
   },
   buttons: {
+    logInBtn: '.log-in-link',
     logOutBtn: '.log-out-btn',
     closeWindowBtns: '.close-window-btn a',
     chatButtons: '.sidebar-wrapper .friends li a',
@@ -32,6 +33,7 @@ export const select = {
     bannersPopUp: '.add-banners-popup',
     chatPopUp: '.popup-overlay .personal-chat-popup',
     quitPopUp: '.quit-popup',
+    logInPopUp: '.login-popup ',
     popUpOverlay: '.popup-overlay',
   },
 };
