@@ -1,24 +1,53 @@
-// "use strict";
+'use strict';
 import { select, classNames } from './settings.js';
 
 // Elements
+const sidebarGeneral = document.getElementById(select.sidebar.general);
+console.log(sidebarGeneral);
+const sidebarDetails = document.getElementById(select.sidebar.details);
+console.log(sidebarDetails);
+const sidebarLinks = document.getElementById(select.sidebar.links);
+console.log(sidebarLinks);
+const sidebarBanners = document.getElementById(select.sidebar.banners);
+console.log(sidebarBanners);
+const sidebarPersonalData = document.getElementById(
+  select.sidebar.personalData
+);
+console.log(sidebarPersonalData);
+const sidebarPayouts = document.getElementById(select.sidebar.payouts);
+console.log(sidebarPayouts);
+const sidebarPostback = document.getElementById(select.sidebar.postback);
+console.log(sidebarPostback);
 
 const logOutBtns = document.querySelectorAll(select.buttons.logOutBtn);
 // console.log(logOutBtn);
 const closeWindowBtns = document.querySelectorAll(
   select.buttons.closeWindowBtns
 );
-console.log(closeWindowBtns);
+// console.log(closeWindowBtns);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
 // console.log(chatButtons);
 
-const sidebarLinks = document.querySelector(select.sidebar.links);
-// console.log(sidebarLinks);
-const sidebarBanners = document.querySelector(select.sidebar.banners);
-// console.log(sidebarBanners);
-
 // Sections / Components
 
+const navbarItems = document.querySelector(select.components.navbarItems);
+// console.log(navbarItems);
+// console.log(sidebar);
+// SUBPAGES
+const allSubpages = document.querySelectorAll(select.subpages.allSubpages);
+console.log(allSubpages);
+
+const mainPage = document.querySelector(select.subpages.mainPage);
+console.log(mainPage);
+const detailsPage = document.querySelector(select.subpages.detailsPage);
+const formPage = document.querySelector(select.subpages.formPage);
+console.log(formPage);
+console.log(detailsPage);
+const payoutPage = document.querySelector(select.subpages.payoutPage);
+console.log(payoutPage);
+const postbackPage = document.querySelector(select.subpages.postbackPage);
+console.log(postbackPage);
+// POPUPS
 const popUpOverlay = document.querySelector(select.components.popUpOverlay);
 // console.log(popUpOverlay);
 const allModals = document.querySelectorAll(select.components.allModals);
@@ -31,11 +60,8 @@ const linksPopUp = document.querySelector(select.components.linksPopUp);
 // console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
 // console.log(bannersPopUp);
-const navbarItems = document.querySelector(select.components.navbarItems);
-// console.log(navbarItems);
-// console.log(sidebar);
 
-// Functions
+// FUNCTIONS
 
 const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
 
@@ -46,34 +72,6 @@ function openModal(modal) {
   popUpOverlay.remove(classNames.popUps.hidden);
   modal.classList.add('show');
 }
-
-const sidebarChangeSubpage = function (event) {
-  event.preventDefault();
-  console.log('click');
-  const clickedElement = this;
-  /* [DONE] remove class 'active' from all article links  */
-  const hiddenElements = document.querySelectorAll('.titles a.active');
-
-  // for (let activeLink of activeLinks) {
-  //   activeLink.classList.remove('active');
-  // }
-  // /* [DONE] add class 'active' to the clicked link */
-  // clickedElement.classList.add('active');
-  // /* [DONE] remove class 'active' from all articles */
-  // const activeArticles = document.querySelectorAll('.posts .post.active');
-
-  // for (let activeArticle of activeArticles) {
-  //   activeArticle.classList.remove('active');
-  // }
-  // /* [DONE] get 'href' attribute from the clicked link */
-  // const articleSelector = clickedElement.getAttribute('href');
-  // /* [DONE] find the correct article using the selector (value of 'href' attribute) */
-  // const targetArticle = document.querySelector(articleSelector);
-  // /* [DONE] add class 'active' to the correct article */
-  // targetArticle.classList.add('active');
-};
-
-document.body.addEventListener('click', sidebarChangeSubpage);
 
 const addHidden = element => element.classList.add(classNames.popUps.hidden);
 
@@ -88,7 +86,13 @@ const closeAllModals = function () {
   addHidden(bannersPopUp);
   // addHidden(loginPopUp);
 };
-// Event handlers
+const hidePages = function () {
+  allSubpages.forEach(function (subpage) {
+    addHidden(subpage);
+  });
+};
+
+// EVENT HANDLERS
 
 document.addEventListener('keydown', function (e) {
   // console.log(e.key);
@@ -96,11 +100,6 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeAllModals();
   }
-});
-
-popUpOverlay.addEventListener('click', function (e) {
-  e.preventDefault();
-  closeAllModals();
 });
 
 closeWindowBtns.forEach(function (btn) {
@@ -118,10 +117,18 @@ logOutBtns.forEach(function (btn) {
   });
 });
 
-chatButtons.addEventListener('click', function (e) {
+sidebarGeneral.addEventListener('click', function (e) {
+  console.log('click');
   e.preventDefault();
-  removeHidden(chatPopUp);
-  removeHidden(popUpOverlay);
+  hidePages();
+  removeHidden(mainPage);
+});
+
+sidebarDetails.addEventListener('click', function (e) {
+  console.log('click');
+  e.preventDefault();
+  hidePages();
+  removeHidden(detailsPage);
 });
 
 sidebarLinks.addEventListener('click', function (e) {
@@ -133,6 +140,38 @@ sidebarLinks.addEventListener('click', function (e) {
 sidebarBanners.addEventListener('click', function (e) {
   e.preventDefault();
   removeHidden(bannersPopUp);
+  removeHidden(popUpOverlay);
+});
+
+sidebarPersonalData.addEventListener('click', function (e) {
+  console.log('click');
+  e.preventDefault();
+  hidePages();
+  removeHidden(formPage);
+});
+
+sidebarPayouts.addEventListener('click', function (e) {
+  console.log('click');
+  e.preventDefault();
+  hidePages();
+  removeHidden(payoutPage);
+});
+
+sidebarPostback.addEventListener('click', function (e) {
+  console.log('click');
+  e.preventDefault();
+  hidePages();
+  removeHidden(postbackPage);
+});
+
+popUpOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeAllModals();
+});
+
+chatButtons.addEventListener('click', function (e) {
+  e.preventDefault();
+  removeHidden(chatPopUp);
   removeHidden(popUpOverlay);
 });
 

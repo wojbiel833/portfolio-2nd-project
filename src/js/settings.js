@@ -8,6 +8,16 @@ export const select = {
     payouts: '#payouts',
     postback: '#postback',
   },
+  subpages: {
+    allSubpages: '[class^="section-"]',
+    mainPage: '.section-main-page',
+    detailsPage: '.section-details',
+    linksPage: '.section-links',
+    bannersPage: '.section-banners',
+    formPage: '.section-form',
+    payoutPage: '.section-payout-details',
+    postbackPage: '.section-new-postback',
+  },
   buttons: {
     logOutBtn: '.log-out-btn',
     closeWindowBtns: '.close-window-btn a',
