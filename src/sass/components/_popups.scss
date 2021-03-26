@@ -17,6 +17,9 @@
 
 .login-popup {
   position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -27,17 +30,28 @@
   z-index: 5020;
 
   h3 {
+    width: 100%;
     padding: 20px;
     border-bottom: 1px $sidebar-items-font-color solid;
   }
 
   .login-details {
     margin: 10px 0 0 30px;
+    position: relative;
 
     input {
       height: 45px;
       margin: 30px 0 50px;
       padding-left: 10px;
+    }
+    i {
+      position: absolute;
+      top: 35%;
+      left: 34%;
+
+      &:last-of-type {
+        left: 73%;
+      }
     }
     .login-btn {
       text-decoration: none;
@@ -198,6 +212,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     input {
       height: 45px;
@@ -205,6 +220,13 @@
       width: 85%;
       padding-left: 10px;
     }
+
+    i {
+      position: absolute;
+      top: 37%;
+      left: 77.5%;
+    }
+
     .chat-send-btn {
       width: 15%;
       height: 45px;
@@ -284,7 +306,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -376,23 +398,46 @@
 
           label {
             display: flex;
+            flex-flow: row nowrap;
             justify-content: space-between;
-            align-items: center;
-            margin: 10px;
-            width: 70%;
             font-weight: 700;
+            width: 100%;
+            text-align: left;
+
+            input[type='checkbox'] {
+              position: absolute;
+              margin: 15px;
+              height: 15px;
+              width: 15px;
+              opacity: 0;
+
+              + .icon {
+                display: inline-block;
+                margin: 15px;
+                height: 15px;
+                width: 15px;
+                border: 1px solid $paragraph-font-color;
+                border-radius: 2px;
+              }
+
+              &:checked + .icon {
+                background-color: $online-color;
+              }
+            }
+
+            p {
+              height: 15px;
+              width: calc(100% - 90px);
+              margin-top: 11px;
+            }
 
             i {
-              margin: 10px;
+              margin: 15px 10px 10px 10px;
               cursor: pointer;
+              height: 15px;
             }
           }
 
-          input {
-            margin: 20px;
-            height: 20px;
-            width: 20px;
-          }
           // input[type='checkbox']:checked + label {
           //   background: $online-color;
           //   font-style: normal;
@@ -447,7 +492,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 80%;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -542,27 +587,46 @@
 
     .banner,
     .b-website {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
       label {
         display: flex;
+        flex-flow: row nowrap;
         justify-content: space-between;
-        margin: 10px;
-        width: 90%;
         font-weight: 700;
+        width: 100%;
+        text-align: left;
+
+        input[type='checkbox'] {
+          position: absolute;
+          margin: 15px;
+          height: 15px;
+          width: 15px;
+          opacity: 0;
+
+          + .icon {
+            display: inline-block;
+            margin: 15px;
+            height: 15px;
+            width: 15px;
+            border: 1px solid $paragraph-font-color;
+            border-radius: 2px;
+          }
+
+          &:checked + .icon {
+            background-color: $online-color;
+          }
+        }
+
+        p {
+          height: 15px;
+          width: calc(100% - 90px);
+          margin-top: 11px;
+        }
 
         i {
-          margin: 10px;
+          margin: 15px 10px 10px 10px;
           cursor: pointer;
+          height: 15px;
         }
-      }
-
-      input {
-        margin: 20px;
-        height: 20px;
-        width: 20px;
       }
 
       &:hover {
@@ -623,9 +687,21 @@
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+
       input {
         margin: 10px 0 20px;
       }
+
+      i {
+        top: 11%;
+        left: 87%;
+
+        &:last-of-type {
+          top: 46%;
+          left: 86%;
+        }
+      }
+
       .login-btn {
         margin: 10px;
       }
@@ -638,140 +714,19 @@
       input {
         width: 85%;
       }
+      i {
+        left: 73.5%;
+      }
     }
   }
 
   .add-links-popup {
     width: 100%;
     height: auto;
-
-    .select-field {
-      .select-scheme-name {
-        border-bottom: 1px $sidebar-items-font-color solid;
-        width: 100%;
-
-        input,
-        select {
-          width: calc(100% - 40px);
-          margin-bottom: 20px;
-        }
-      }
-      .select-language {
-        width: 100%;
-
-        label {
-          margin: 5px 0 0 15px;
-        }
-
-        select {
-          width: calc(100% - 40px);
-          margin: 15px;
-        }
-      }
-      .select-websites {
-        height: 400px;
-
-        .websites {
-          flex-flow: row wrap;
-          flex: 0 0 100%;
-
-          .website {
-            width: 100%;
-            flex-flow: row nowrap;
-          }
-        }
-      }
-    }
-    .generated-link {
-      margin: 20px 0 10px;
-    }
   }
 
   .add-banners-popup {
     width: 100%;
-
-    .select-field {
-      .select-scheme-name {
-        border-bottom: 1px $sidebar-items-font-color solid;
-        width: 100%;
-        label {
-          position: relative;
-        }
-
-        input,
-        select {
-          width: calc(100% - 40px);
-          margin: 25px 0 10px 15px;
-        }
-      }
-      .select-language {
-        width: 100%;
-        border-bottom: 1px $sidebar-items-font-color solid;
-
-        label {
-          margin: 5px 0 0 15px;
-        }
-
-        select {
-          width: calc(100% - 40px);
-          margin: 15px;
-        }
-      }
-    }
-
-    .banner-details {
-      label {
-        position: relative;
-
-        &:first-of-type {
-          margin-top: 20px;
-        }
-      }
-
-      input,
-      select {
-        width: calc(100% - 40px);
-        margin: 25px 0 10px 15px;
-
-        &:last-of-type {
-          margin-bottom: 20px;
-        }
-      }
-    }
-
-    .select-banners {
-      border-bottom: 1px $sidebar-items-font-color solid;
-    }
-
-    .select-banners,
-    .select-websites {
-      height: 400px;
-      width: 100%;
-      padding-bottom: 20px;
-
-      .banner,
-      .b-website {
-        flex-flow: row wrap;
-        flex: 0 0 100%;
-        label {
-          width: 70%;
-        }
-      }
-    }
-
-    .generated-link {
-      input {
-        width: calc(100% - 180px);
-      }
-
-      .copy-btn {
-        font-size: 12px;
-      }
-
-      .enter-btn {
-        font-size: 12px;
-      }
-    }
   }
 }
 
@@ -785,9 +740,21 @@
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
+
       input {
         margin: 10px 0 20px;
       }
+
+      i {
+        top: 11%;
+        left: 87%;
+
+        &:last-of-type {
+          top: 46%;
+          left: 86%;
+        }
+      }
+
       .login-btn {
         margin: 10px;
       }
@@ -796,6 +763,12 @@
 
   .personal-chat-popup {
     width: 90%;
+
+    .post-message {
+      i {
+        left: 75.5%;
+      }
+    }
   }
 
   .add-links-popup {
@@ -911,9 +884,6 @@
       .b-website {
         flex-flow: row wrap;
         flex: 0 0 100%;
-        label {
-          width: 70%;
-        }
       }
     }
 
@@ -963,7 +933,7 @@
 }
 
 .add-links-popup {
-  width: 100%;
+  width: 80%;
   height: auto;
 
   .select-field {
@@ -1010,7 +980,7 @@
 }
 
 .add-banners-popup {
-  width: 100%;
+  width: 80%;
 
   .select-field {
     .select-scheme-name {
@@ -1062,9 +1032,6 @@
     .b-website {
       flex-flow: row wrap;
       flex: 0 0 50%;
-      label {
-        width: 70%;
-      }
     }
   }
 
