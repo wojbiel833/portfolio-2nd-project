@@ -112,6 +112,17 @@ const chart = new Chart(ctx, {
 });
 
 // EVENT HANDLERS
+/* SIDEBAR hamburger functionality */
+
+const sidebar = document.querySelector(select.components.sidebar);
+const hamburgerBtn = document.querySelector(select.buttons.sidebarShow);
+
+hamburgerBtn.addEventListener('click', function () {
+  sidebar.classList.toggle(classNames.sidebar.active);
+  removeHidden(navbarItems);
+});
+
+// esc-clos
 document.addEventListener('keydown', function (e) {
   // console.log(e.key);
 
@@ -130,6 +141,7 @@ closeWindowBtns.forEach(function (btn) {
 logOutBtns.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
+    closeAllModals();
     removeHidden(quitPopUp);
     removeHidden(popUpOverlay);
   });
@@ -138,14 +150,25 @@ logOutBtns.forEach(function (btn) {
 logInBtns.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
+    closeAllModals();
     removeHidden(logInPopUp);
     removeHidden(popUpOverlay);
   });
 });
 
-popUpOverlay.addEventListener('click', function (e) {
+chatButtons.addEventListener('click', function (e) {
   e.preventDefault();
   closeAllModals();
+  removeHidden(chatPopUp);
+  removeHidden(popUpOverlay);
+});
+
+popUpOverlay.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target === this) {
+    closeAllModals();
+  }
 });
 
 sidebarGeneral.addEventListener('click', function (e) {
@@ -162,12 +185,14 @@ sidebarDetails.addEventListener('click', function (e) {
 
 sidebarLinks.addEventListener('click', function (e) {
   e.preventDefault();
+  closeAllModals();
   removeHidden(linksPopUp);
   removeHidden(popUpOverlay);
 });
 
 sidebarBanners.addEventListener('click', function (e) {
   e.preventDefault();
+  closeAllModals();
   removeHidden(bannersPopUp);
   removeHidden(popUpOverlay);
 });
@@ -189,20 +214,4 @@ sidebarPostback.addEventListener('click', function (e) {
   e.preventDefault();
   hidePages();
   removeHidden(postbackPage);
-});
-
-chatButtons.addEventListener('click', function (e) {
-  e.preventDefault();
-  removeHidden(chatPopUp);
-  removeHidden(popUpOverlay);
-});
-
-/* SIDEBAR hamburger functionality */
-
-const sidebar = document.querySelector(select.components.sidebar);
-const hamburgerBtn = document.querySelector(select.buttons.sidebarShow);
-
-hamburgerBtn.addEventListener('click', function () {
-  sidebar.classList.toggle(classNames.sidebar.active);
-  removeHidden(navbarItems);
 });
