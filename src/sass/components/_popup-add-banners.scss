@@ -1,0 +1,348 @@
+.add-banners-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 5020;
+
+  .popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    h3 {
+      padding: 10px;
+      margin: 0;
+    }
+
+    span {
+      font-size: 30px;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+      }
+    }
+  }
+
+  .select-field {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+
+    .select-scheme-name {
+      width: 85%;
+
+      label {
+        position: absolute;
+        font-weight: 700;
+        margin: 5px 0 0 15px;
+      }
+
+      input,
+      select {
+        height: 45px;
+        width: calc(50% - 40px);
+        margin: 45px 0 0 15px;
+        padding: 10px;
+      }
+    }
+    .select-language {
+      width: 15%;
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      select {
+        height: 45px;
+        width: 90%;
+        margin: 8px 15px 15px 0;
+        padding: 10px;
+      }
+    }
+  }
+
+  .banner-details {
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    label {
+      position: absolute;
+      font-weight: 700;
+      margin: 5px 0 0 15px;
+    }
+
+    input,
+    select {
+      height: 45px;
+      min-width: calc(32% - 10px);
+      margin: 45px 0 20px 15px;
+      padding: 10px;
+    }
+  }
+  .select-banners,
+  .select-websites {
+    width: 50%;
+    height: 380px;
+    overflow: auto;
+
+    .banner,
+    .b-website {
+      label {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-weight: 700;
+        width: 100%;
+        text-align: left;
+
+        input[type='checkbox'] {
+          position: absolute;
+          margin: 15px;
+          height: 15px;
+          width: 15px;
+          opacity: 0;
+
+          + .icon {
+            display: inline-block;
+            margin: 15px;
+            height: 15px;
+            width: 15px;
+            border: 1px solid $paragraph-font-color;
+            border-radius: 2px;
+          }
+
+          &:checked + .icon {
+            background-color: $online-color;
+          }
+        }
+
+        p {
+          height: 15px;
+          width: calc(100% - 90px);
+          margin-top: 11px;
+        }
+
+        i {
+          margin: 15px 10px 10px 10px;
+          cursor: pointer;
+          height: 15px;
+        }
+      }
+
+      &:hover {
+        background-color: $table-hover;
+      }
+    }
+  }
+
+  .generated-link {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 5px;
+    border-top: 1px $sidebar-items-font-color solid;
+
+    input {
+      width: calc(100% - 230px);
+      height: 47px;
+      margin: 5px;
+    }
+
+    .copy-btn {
+      text-decoration: none;
+      padding: 10px 10px;
+      background: $online-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .enter-btn {
+      text-decoration: none;
+      padding: 10px 10px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .add-banners-popup {
+    width: 100%;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 100%;
+        label {
+          position: relative;
+        }
+
+        input,
+        select {
+          width: calc(100% - 40px);
+          margin: 25px 0 10px 15px;
+        }
+      }
+      .select-language {
+        width: 100%;
+        border-bottom: 1px $sidebar-items-font-color solid;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+    }
+
+    .banner-details {
+      label {
+        position: relative;
+
+        &:first-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      input,
+      select {
+        width: calc(100% - 40px);
+        margin: 25px 0 10px 15px;
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .select-banners {
+      border-bottom: 1px $sidebar-items-font-color solid;
+    }
+
+    .select-banners,
+    .select-websites {
+      height: 400px;
+      width: 100%;
+      padding-bottom: 20px;
+
+      .banner,
+      .b-website {
+        flex-flow: row wrap;
+        flex: 0 0 100%;
+      }
+    }
+
+    .generated-link {
+      input {
+        width: calc(100% - 200px);
+      }
+
+      .copy-btn {
+        font-size: 14px;
+      }
+
+      .enter-btn {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and(max-width: 991px) {
+  .add-banners-popup {
+    width: 80%;
+
+    .select-field {
+      .select-scheme-name {
+        border-bottom: 1px $sidebar-items-font-color solid;
+        width: 85%;
+
+        input,
+        select {
+          width: calc(50% - 40px);
+        }
+      }
+      .select-language {
+        width: 15%;
+        border-bottom: 1px $sidebar-items-font-color solid;
+
+        label {
+          margin: 5px 0 0 15px;
+        }
+
+        select {
+          width: calc(100% - 40px);
+          margin: 15px;
+        }
+      }
+    }
+
+    .banner-details {
+      input,
+      select {
+        width: calc(33% - 40px);
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .select-banners {
+      border-bottom: 1px $sidebar-items-font-color solid;
+    }
+
+    .select-banners,
+    .select-websites {
+      height: 400px;
+      width: 50%;
+      padding-bottom: 20px;
+
+      .banner,
+      .b-website {
+        flex-flow: row wrap;
+        flex: 0 0 50%;
+      }
+    }
+
+    .generated-link {
+      input {
+        width: calc(100% - 200px);
+      }
+
+      .copy-btn {
+        font-size: 20px;
+      }
+
+      .enter-btn {
+        font-size: 20px;
+      }
+    }
+  }
+}

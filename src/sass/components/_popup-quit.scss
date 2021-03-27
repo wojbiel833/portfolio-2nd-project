@@ -1,0 +1,60 @@
+.quit-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 5020;
+
+  p {
+    padding: 20px;
+    border-bottom: 1px $sidebar-items-font-color solid;
+  }
+
+  div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+
+    .cancel-btn {
+      text-decoration: none;
+      padding: 10px 30px;
+      background-color: $sidebar-items-font-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin-right: 10px;
+
+      &:hover {
+        background-color: darken(
+          $color: $sidebar-items-font-color,
+          $amount: 10%
+        );
+      }
+    }
+
+    .quit-btn,
+    .login-btn {
+      text-decoration: none;
+      padding: 10px 10px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and(max-width: 767px) {
+  .quit-popup {
+    width: 50%;
+  }
+}

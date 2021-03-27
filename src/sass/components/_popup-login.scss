@@ -1,0 +1,138 @@
+.login-popup {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 5020;
+
+  h3 {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px $sidebar-items-font-color solid;
+  }
+
+  .login-details {
+    margin: 10px 0 0 30px;
+    position: relative;
+
+    input {
+      height: 45px;
+      margin: 30px 0 50px;
+      padding-left: 10px;
+    }
+    i {
+      position: absolute;
+      top: 35%;
+      left: 34%;
+
+      &:last-of-type {
+        left: 73%;
+      }
+    }
+    .login-btn {
+      text-decoration: none;
+      padding: 10px 30px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 499px) {
+  .login-popup {
+    width: 90%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin: 10px 0 20px;
+      }
+
+      i {
+        top: 11%;
+        left: 87%;
+
+        &:last-of-type {
+          top: 46%;
+          left: 86%;
+        }
+      }
+
+      .login-btn {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and(max-width: 767px) {
+  .login-popup {
+    width: 60%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin: 10px 0 20px;
+      }
+
+      i {
+        top: 11%;
+        left: 87%;
+
+        &:last-of-type {
+          top: 46%;
+          left: 86%;
+        }
+      }
+
+      .login-btn {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and(max-width: 991px) {
+  .login-popup {
+    width: 85%;
+
+    .login-details {
+      margin: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        margin: 10px 10px 20px;
+      }
+      .login-btn {
+        margin: 0 0 1.5% 3%;
+      }
+    }
+  }
+}

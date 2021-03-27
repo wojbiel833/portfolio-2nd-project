@@ -1,0 +1,208 @@
+.personal-chat-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 5020;
+
+  .popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px $sidebar-items-font-color solid;
+
+    h3 {
+      padding: 10px;
+      margin: 0;
+    }
+
+    span {
+      font-size: 30px;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $sidebar-items-font-color;
+        cursor: pointer;
+
+        &:hover {
+          color: $sidebar-items-font-color;
+        }
+      }
+    }
+  }
+  .recepient-info {
+    display: inline-flex;
+
+    img {
+      margin: 10px;
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .recepient-status {
+      font-family: $main-font;
+      margin-bottom: 25px;
+
+      .recepient-name {
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px;
+        margin: 0;
+        border: 0;
+      }
+      .online {
+        text-align: center;
+        font-size: 10px;
+        background-color: $online-color;
+        color: #fff;
+        width: 50px;
+        border-radius: 3px;
+        padding: 5px;
+        margin: -5px 0 0 10px;
+      }
+    }
+  }
+
+  .messages-display {
+    border-top: 1px $sidebar-items-font-color solid;
+    border-bottom: 1px $sidebar-items-font-color solid;
+    height: 250px;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .message-you {
+      display: inline-block;
+      // color: #fff;
+      background-color: #a0e1ff;
+      // border: 2px solid #fff;
+      padding: 20px;
+      border-radius: 20px;
+      // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      position: relative;
+      margin-bottom: 30px;
+
+      &:after {
+        content: '';
+        display: block;
+        background-color: #a0e1ff;
+        // border: 2px solid #fff;
+        border-width: 0 2px 2px 0;
+        width: 20px;
+        height: 24px;
+        // box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: -10%;
+        left: 32%;
+        // background-color: #a0e1ff;
+        transform: rotate(45deg);
+      }
+    }
+
+    .message-recepient {
+      display: inline-block;
+      // color: #fff;
+      background-color: #ffdb99;
+      // border: 2px solid #fff;
+      padding: 20px;
+      border-radius: 20px;
+      // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      position: relative;
+      margin-bottom: 30px;
+
+      &:after {
+        content: '';
+        display: block;
+        background-color: #ffdb99;
+        // border: 2px solid #fff;
+        border-width: 0 2px 2px 0;
+        width: 20px;
+        height: 24px;
+        // box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: -10%;
+        left: 32%;
+        // background-color: #a0e1ff;
+        transform: rotate(45deg);
+        // background-color: #ffdb99;
+      }
+    }
+  }
+  .post-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    input {
+      height: 45px;
+      margin: 10px;
+      width: 85%;
+      padding-left: 10px;
+    }
+
+    i {
+      position: absolute;
+      top: 37%;
+      left: 77.5%;
+    }
+
+    .chat-send-btn {
+      width: 15%;
+      height: 45px;
+      margin-right: 10px;
+      text-decoration: none;
+      padding: 10px 10px;
+      background-color: $main-color;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      text-align: center;
+
+      &:hover {
+        background-color: darken($color: $main-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 499px) {
+  .personal-chat-popup {
+    width: 100%;
+    .post-message {
+      input {
+        width: 85%;
+      }
+      i {
+        left: 73.5%;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and(max-width: 767px) {
+  .personal-chat-popup {
+    width: 90%;
+
+    .post-message {
+      i {
+        left: 75.5%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and(max-width: 991px) {
+  .personal-chat-popup {
+    width: 80%;
+  }
+}

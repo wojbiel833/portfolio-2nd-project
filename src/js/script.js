@@ -1,79 +1,57 @@
 'use strict';
 import { select, classNames } from './settings.js';
 
-// Elements
+// ELEMENTS
+// sidebar
 const sidebarGeneral = document.getElementById(select.sidebar.general);
-// console.log(sidebarGeneral);
 const sidebarDetails = document.getElementById(select.sidebar.details);
-// console.log(sidebarDetails);
 const sidebarLinks = document.getElementById(select.sidebar.links);
-// console.log(sidebarLinks);
 const sidebarBanners = document.getElementById(select.sidebar.banners);
-// console.log(sidebarBanners);
 const sidebarPersonalData = document.getElementById(
   select.sidebar.personalData
 );
-// console.log(sidebarPersonalData);
 const sidebarPayouts = document.getElementById(select.sidebar.payouts);
-// console.log(sidebarPayouts);
 const sidebarPostback = document.getElementById(select.sidebar.postback);
-// console.log(sidebarPostback);
 
+// buttons
 const logInBtns = document.querySelectorAll(select.buttons.logInBtn);
-console.log(logInBtns);
 const logOutBtns = document.querySelectorAll(select.buttons.logOutBtn);
-// console.log(logOutBtns);
 const closeWindowBtns = document.querySelectorAll(
   select.buttons.closeWindowBtns
 );
-// console.log(closeWindowBtns);
 const chatButtons = document.querySelector(select.buttons.chatButtons); // gdy dojdzie wiecej zmieniac na querySelectorAll + petloa lub forEach
-// console.log(chatButtons);
 
-// Sections / Components
-
+// SSECTIONS/COMPONENTS
 const navbarItems = document.querySelector(select.components.navbarItems);
-// console.log(navbarItems);
-// console.log(sidebar);
-// SUBPAGES
-const allSubpages = document.querySelectorAll(select.subpages.allSubpages);
-// console.log(allSubpages);
 
+// subpages
+const allSubpages = document.querySelectorAll(select.subpages.allSubpages);
 const mainPage = document.querySelector(select.subpages.mainPage);
-// console.log(mainPage);
 const detailsPage = document.querySelector(select.subpages.detailsPage);
 const formPage = document.querySelector(select.subpages.formPage);
-// console.log(formPage);
-// console.log(detailsPage);
 const payoutPage = document.querySelector(select.subpages.payoutPage);
-// console.log(payoutPage);
 const postbackPage = document.querySelector(select.subpages.postbackPage);
-// console.log(postbackPage);
-// POPUPS
+
+// popups
 const popUpOverlay = document.querySelector(select.components.popUpOverlay);
-// console.log(popUpOverlay);
 const allModals = document.querySelectorAll(select.components.allModals);
-// console.log(allModals);
 const quitPopUp = document.querySelector(select.components.quitPopUp);
-// console.log(quitPopUp);
 const chatPopUp = document.querySelector(select.components.chatPopUp);
-// console.log(chatPopUp);
 const linksPopUp = document.querySelector(select.components.linksPopUp);
-// console.log(linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
-// console.log(bannersPopUp);
 const logInPopUp = document.querySelector(select.components.logInPopUp);
-console.log(logInPopUp);
 
-const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
+// FUNCTIONS
 
-function openModal(modal) {
-  allModals.forEach(function (modal) {
-    modal.classList.remove(classNames.popUps.hidden);
-  });
-  popUpOverlay.remove(classNames.popUps.hidden);
-  modal.classList.add('show');
-}
+// const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
+
+// function openModal(modal) {
+//   allModals.forEach(function (modal) {
+//     modal.classList.remove(classNames.popUps.hidden);
+//   });
+//   popUpOverlay.remove(classNames.popUps.hidden);
+//   modal.classList.add('show');
+// }
 
 const addHidden = element => element.classList.add(classNames.popUps.hidden);
 
@@ -88,14 +66,52 @@ const closeAllModals = function () {
   addHidden(bannersPopUp);
   addHidden(logInPopUp);
 };
+
 const hidePages = function () {
   allSubpages.forEach(function (subpage) {
     addHidden(subpage);
   });
 };
+// CHART
+const ctx = document.getElementById('myChart').getContext('2d');
+console.log(ctx);
+
+const chart = new Chart(ctx, {
+  // 1
+  type: 'bar',
+  data: {
+    // 2
+    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+    // 3
+    datasets: [
+      {
+        // 4
+        label: 'Signups',
+        // 5
+        backgroundColor: '#8DBEC8',
+        borderColor: '#8DBEC8',
+        // 6
+        data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
+      },
+      {
+        label: 'FTD',
+        backgroundColor: '#F29E4E',
+        borderColor: '#F29E4E',
+        data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
+      },
+      {
+        label: 'Earned',
+        backgroundColor: '#71B374',
+        borderColor: '#71B374',
+        data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
+        // 7
+        hidden: true,
+      },
+    ],
+  },
+});
 
 // EVENT HANDLERS
-
 document.addEventListener('keydown', function (e) {
   // console.log(e.key);
 
