@@ -1,8 +1,5 @@
 .login-popup {
   position: absolute;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -19,7 +16,7 @@
   }
 
   .login-details {
-    margin: 10px 0 0 30px;
+    left: 3%;
     position: relative;
 
     input {
@@ -30,10 +27,10 @@
     i {
       position: absolute;
       top: 35%;
-      left: 34%;
+      left: 32%;
 
       &:last-of-type {
-        left: 73%;
+        left: 69%;
       }
     }
     .login-btn {
@@ -132,6 +129,22 @@
       }
       .login-btn {
         margin: 0 0 1.5% 3%;
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .login-popup {
+    .login-details {
+      i {
+        top: 37%;
+        left: 30%;
+
+        &:last-of-type {
+          top: 37%;
+          left: 60%;
+        }
       }
     }
   }

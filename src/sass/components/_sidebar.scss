@@ -3,7 +3,7 @@
   min-width: 250px;
   max-width: 250px;
   overflow: auto;
-  position: relative;
+  position: fixed;
   transition: 1s;
 
   .st-pusher {
@@ -174,6 +174,9 @@
 
 @media (min-width: 0px) and(max-width: 767px) {
   .st-container {
+    position: fixed;
+    top: 0;
+    height: 103%;
     margin-left: -250px;
 
     #sidebar-show {
@@ -280,7 +283,7 @@
 
           .sidebar-label {
             font-size: 40px;
-            margin: 100px 60px 60px;
+            margin: 100px 40px 60px;
             color: $sidebar-label-font-color;
             font-weight: 700;
           }
@@ -297,6 +300,7 @@
               &:hover {
                 background-color: #3f3f3f;
                 border-left: 8px $main-color solid;
+
                 a {
                   color: $sidebar-label-font-color;
                 }
@@ -322,6 +326,9 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   .st-container {
+    position: fixed;
+    overflow: auto;
+    height: 100%;
     margin-left: -250px;
 
     #sidebar-show {
@@ -333,7 +340,6 @@
       border-top: 1px $sidebar-items-font-color solid;
 
       .sidebar-label {
-        font-size: 20px;
         margin: 30px 0 20px 20px;
         color: #fff;
         font-weight: 700;
@@ -345,6 +351,7 @@
         text-align: center;
 
         .nav-link {
+          margin: 0;
           color: $sidebar-items-font-color;
 
           &:hover {
