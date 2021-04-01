@@ -16,26 +16,31 @@
   }
 
   .login-details {
-    left: 3%;
-    position: relative;
+    display: flex;
+    justify-content: center;
 
-    input {
-      height: 45px;
-      margin: 30px 0 50px;
-      padding-left: 10px;
-    }
-    i {
-      position: absolute;
-      top: 35%;
-      left: 32%;
+    div {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
 
-      &:last-of-type {
-        left: 69%;
+      input {
+        height: 45px;
+        margin: 30px 0 50px;
+        padding-left: 10px;
+      }
+      i {
+        position: absolute;
+        right: 15px;
+        bottom: 65px;
       }
     }
     .login-btn {
       text-decoration: none;
       padding: 10px 30px;
+      margin: 30px 0 50px;
       background-color: $main-color;
       color: #fff;
       font-size: 20px;
@@ -63,20 +68,10 @@
       input {
         margin: 10px 0 20px;
       }
+    }
 
-      i {
-        top: 11%;
-        left: 87%;
-
-        &:last-of-type {
-          top: 46%;
-          left: 86%;
-        }
-      }
-
-      .login-btn {
-        margin: 10px;
-      }
+    .login-btn {
+      margin: 10px;
     }
   }
 }
@@ -94,16 +89,6 @@
 
       input {
         margin: 10px 0 20px;
-      }
-
-      i {
-        top: 11%;
-        left: 87%;
-
-        &:last-of-type {
-          top: 46%;
-          left: 86%;
-        }
       }
 
       .login-btn {
@@ -136,16 +121,6 @@
 
 @media (min-width: 991px) {
   .login-popup {
-    .login-details {
-      i {
-        top: 37%;
-        left: 30%;
-
-        &:last-of-type {
-          top: 37%;
-          left: 60%;
-        }
-      }
-    }
+    width: 70%;
   }
 }

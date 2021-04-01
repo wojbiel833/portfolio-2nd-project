@@ -82,12 +82,9 @@
 
     .message-you {
       display: inline-block;
-      // color: #fff;
       background-color: #a0e1ff;
-      // border: 2px solid #fff;
       padding: 20px;
       border-radius: 20px;
-      // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       position: relative;
       margin-bottom: 30px;
 
@@ -95,27 +92,21 @@
         content: '';
         display: block;
         background-color: #a0e1ff;
-        // border: 2px solid #fff;
         border-width: 0 2px 2px 0;
         width: 20px;
         height: 24px;
-        // box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
         position: absolute;
         bottom: -10%;
         left: 32%;
-        // background-color: #a0e1ff;
         transform: rotate(45deg);
       }
     }
 
     .message-recepient {
       display: inline-block;
-      // color: #fff;
       background-color: #ffdb99;
-      // border: 2px solid #fff;
       padding: 20px;
       border-radius: 20px;
-      // box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       position: relative;
       margin-bottom: 30px;
 
@@ -123,17 +114,13 @@
         content: '';
         display: block;
         background-color: #ffdb99;
-        // border: 2px solid #fff;
         border-width: 0 2px 2px 0;
         width: 20px;
         height: 24px;
-        // box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
         position: absolute;
         bottom: -10%;
         left: 32%;
-        // background-color: #a0e1ff;
         transform: rotate(45deg);
-        // background-color: #ffdb99;
       }
     }
   }
@@ -143,17 +130,21 @@
     align-items: center;
     position: relative;
 
-    input {
-      height: 45px;
-      margin: 10px;
+    div {
       width: 85%;
-      padding-left: 10px;
-    }
 
-    i {
-      position: absolute;
-      top: 37%;
-      left: 77.5%;
+      input {
+        height: 45px;
+        width: 95%;
+        margin: 10px;
+        padding-left: 10px;
+      }
+
+      i {
+        position: absolute;
+        bottom: 25px;
+        right: 20%;
+      }
     }
 
     .chat-send-btn {
@@ -178,26 +169,12 @@
 @media (min-width: 0px) and (max-width: 499px) {
   .personal-chat-popup {
     width: 100%;
-    .post-message {
-      input {
-        width: 85%;
-      }
-      i {
-        left: 73.5%;
-      }
-    }
   }
 }
 
 @media (min-width: 500px) and(max-width: 767px) {
   .personal-chat-popup {
     width: 90%;
-
-    .post-message {
-      i {
-        left: 75.5%;
-      }
-    }
   }
 }
 
