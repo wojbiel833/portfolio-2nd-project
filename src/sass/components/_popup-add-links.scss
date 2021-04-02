@@ -8,6 +8,7 @@
   border-radius: 3px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 5020;
+  overflow: auto;
 
   .popup-heading {
     display: flex;
@@ -109,16 +110,29 @@
               opacity: 0;
 
               + .icon {
+                position: relative;
                 display: inline-block;
                 margin: 15px;
                 height: 15px;
                 width: 15px;
                 border: 1px solid $paragraph-font-color;
                 border-radius: 2px;
+
+                i {
+                  position: absolute;
+                  color: #fff;
+                  top: -17px;
+                  left: -11px;
+                  font-size: 0;
+                }
               }
 
               &:checked + .icon {
                 background-color: $online-color;
+
+                i {
+                  font-size: 16px;
+                }
               }
             }
 
@@ -182,7 +196,8 @@
 @media (min-width: 0px) and (max-width: 767px) {
   .add-links-popup {
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: fixed;
 
     .select-field {
       .select-scheme-name {
@@ -231,7 +246,7 @@
 @media (min-width: 768px) and(max-width: 991px) {
   .add-links-popup {
     width: 80%;
-    height: auto;
+    height: 100%;
 
     .select-field {
       .select-scheme-name {
@@ -274,5 +289,11 @@
     .generated-link {
       margin: 20px 0 10px;
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .add-links-popup {
+    height: 100%;
   }
 }

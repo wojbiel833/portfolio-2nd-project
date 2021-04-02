@@ -122,7 +122,7 @@ hamburgerBtn.addEventListener('click', function () {
   removeHidden(navbarItems);
 });
 
-// esc-clos
+// esc-closing
 document.addEventListener('keydown', function (e) {
   // console.log(e.key);
 
