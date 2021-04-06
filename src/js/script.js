@@ -152,8 +152,6 @@ chatButtons.addEventListener('click', function (e) {
 });
 
 popUpOverlay.addEventListener('click', function (e) {
-  e.preventDefault();
-
   if (e.target === this) {
     closeAllModals();
   }
