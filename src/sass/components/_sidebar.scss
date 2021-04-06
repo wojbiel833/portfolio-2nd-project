@@ -126,57 +126,6 @@
   height: 100%;
 }
 
-// #sidebar.active {
-//   margin-left: -250px;
-// }
-
-// Transform effect
-
-// .st-effect-14.st-container {
-//   -webkit-perspective: 1500px;
-//   perspective: 1500px;
-//   -webkit-perspective-origin: 0% 50%;
-//   perspective-origin: 0% 50%;
-// }
-
-// .st-effect-14 .st-pusher {
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
-// .st-effect-14.st-menu-open .st-pusher {
-//   -webkit-transform: translate3d(300px, 0, 0);
-//   transform: translate3d(300px, 0, 0);
-// }
-
-// .st-effect-14.st-menu {
-//   -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-//   transform: translate3d(-100%, 0, 0) rotateY(90deg);
-//   -webkit-transform-origin: 0% 50%;
-//   transform-origin: 0% 50%;
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-// }
-
-// .st-effect-14.st-menu-open .st-effect-14.st-menu {
-//   visibility: visible;
-//   -webkit-transition-delay: 0.1s;
-//   transition-delay: 0.1s;
-//   -webkit-transition-timing-function: ease-in-out;
-//   transition-timing-function: ease-in-out;
-//   -webkit-transition-property: -webkit-transform;
-//   transition-property: transform;
-//   -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-//   transform: translate3d(-100%, 0, 0) rotateY(0deg);
-// }
-
-// RWD
-// @media (min-width: 0px) and (max-width: 499px) {
-//   .st-container {
-//     // display: none;
-//   }
-// }
-
 @media (min-width: 0px) and(max-width: 767px) {
   .st-container {
     position: fixed;

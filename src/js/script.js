@@ -41,18 +41,6 @@ const linksPopUp = document.querySelector(select.components.linksPopUp);
 const bannersPopUp = document.querySelector(select.components.bannersPopUp);
 const logInPopUp = document.querySelector(select.components.logInPopUp);
 
-// FUNCTIONS
-
-// const closeModal = modal => modal.classList.add(classNames.popUps.hidden);
-
-// function openModal(modal) {
-//   allModals.forEach(function (modal) {
-//     modal.classList.remove(classNames.popUps.hidden);
-//   });
-//   popUpOverlay.remove(classNames.popUps.hidden);
-//   modal.classList.add('show');
-// }
-
 const addHidden = element => element.classList.add(classNames.popUps.hidden);
 
 const removeHidden = element =>
