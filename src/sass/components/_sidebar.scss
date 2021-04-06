@@ -235,7 +235,7 @@
             }
 
             &:last-of-type {
-              margin-bottom: 50px;
+              // margin-bottom: 50px;
             }
 
             a {
@@ -285,6 +285,7 @@
         .from-navbar {
           width: 100%;
           border-top: 1px $sidebar-items-font-color solid;
+          margin: 0;
 
           .sidebar-label {
             font-size: 40px;
@@ -383,9 +384,16 @@
 
     &.active {
       margin-left: 0;
+      min-height: 100%;
 
-      #sidebar-show {
-        margin-right: 0;
+      .st-pusher {
+        .sidebar-wrapper {
+          position: relative;
+
+          #sidebar-show {
+            margin-right: 0;
+          }
+        }
       }
     }
   }
