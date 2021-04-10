@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin panel</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg col-md-12 col-lg-12 navbar-light bg-light">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                <div class="w-100 text-right">
+                </div>
+            </div>
+             <!-- Togglebutton -->
+             <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                    </div>
+                </nav>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link m-2 mx-4 menu-item nav-active"><i class="fas fa-wallet"></i>1,500.00 €<i class="fas fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link m-2 mx-4 menu-item"><span><i class="far fa-bell"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link log-in-link m-2 mx-4 menu-item"><i class="far fa-user-circle"></i>Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link m-2 mx-4 menu-item"><i class=" log-out-btn fas fa-sign-out-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div id="st-container" class="st-container ">
+            <div class="st-pusher">
+                <div class="sidebar-wrapper st-menu st-effect-14 " id="menu-14">
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3 class="icon icon-stack">Just do it</h3>
+                            <button type="button" id="sidebar-show" class="btn btn-info" data-effect="st-effect-14">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                        </div>
+                
+                        <ul class="list-unstyled components">
+                            <li class="active">
+                                <a id="#general" href="#"><i class="far fa-star"></i> <span>General</span></a>
+                            </li>
+                            <li>
+                                <a id="#details" href="#"><i class="fas fa-bars"></i> <span>Details</span></a>
+                            </li>
+                            <li>
+                                <a id="#links" href="#"><i class="fas fa-link"></i> <span>Links</span></a>
+                            </li>
+                            <li>
+                                <a id="#banners" href="#"><i class="fas fa-th-large"></i> <span>Banners</span></a>
+                            </li>
+                            <li>
+                                <a id="#personal-data" href="#"><i class="far fa-user"></i> <span>Personal data</span></a>
+                            </li>
+                            <li>
+                                <a id="#payouts" href="#"><i class="fas fa-hand-holding-usd"></i> <span>Payout</span></a>
+                            </li>
+                            <li>
+                                <a id="#postback" href="#"><i class="fas fa-undo"></i> <span>Postback</span></a>
+                            </li>
+                        </ul>
+                        <ul class="friends">
+                                <li><p class="sidebar-label">YOUR MANAGER</p></li>
+                            <li>
+                                <a href="#">
+                                    <span><img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0"></span>
+                                    <p>Wojciech B.</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="from-navbar hidden">
+                            <li><p class="sidebar-label">YOUR ACCOUNT</p></li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class="fas fa-wallet"></i>1,500.00 €<i class="fas fa-chevron-down"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><span><i class="far fa-bell"></i></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link log-out-btn"><i class="far fa-user-circle"></i>Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><i class=" log-out-btn fas fa-sign-out-alt"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            <!-- Main page -->
+            <div class="section-main-page">
+                <section class="graph-part">
+                    <h3>GENERAL STATISTIC</h3>
+                    <div class='date-picker'>
+                        <div class="date-inputs">
+                            <input class='begin-date' type='text' name='begin-date' />
+                            <input class='end-date' type='text' name='end-date' />
+                            <a href="#"><i class="fas fa-calendar-alt"></i></a>
+                            <a href="#"><i class="fas fa-undo-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </section>
+                <section class="links-part">
+                    <h3>LINKS</h3>
+                    <div class="links">
+                        <div class="links-table">
+                            <a class="add-button" href="#">+ add new</a>
+                            <table>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                    <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            <a href="#" class="add-button">+ add new</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Links -->
+
+            <div>
+                <section class="section-links links-part hidden">
+                    <h3>LINKS</h3>
+                    <div class="links">
+                        <div class="links-table">
+                            <a class="add-button" href="#">+ add new</a>
+                            <table>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                    <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            <a href="#" class="add-button">+ add new</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Banners -->
+
+            <div>
+                <section class="section-banners links-part hidden">
+                    <h3>BANNERS</h3>
+                    <div class="links">
+                        <div class="links-table">
+                            <a class="add-button" href="#">+ add new</a>
+                            <table>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                    <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="link-row">
+                                    <td class="name">BANNER: Lorem ipsum dolor</td>
+                                    <td class="link"><a href="#">https://kodilla.com/</a></td>
+                                    <td class="icons">
+                                        <a href="#"><i class="fas fa-link"></i></a>
+                                        <a href="#"><i class="far fa-trash-alt"></i></i></a>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            <a href="#" class="add-button">+ add new</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Form -->
+
+            <section class="section-form hidden" >
+                <h3>PERSONAL DATA</h3>
+                <form class="user-data">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Leonardo" minlength="2" required autocomplete>
+                    </div>
+                    <div>
+                        <label for="surname">Surame:</label>
+                        <input type="text" id="surname" name="surname" placeholder="Dicaprio" minlength="2" required autocomplete>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="leonardodicaprio@gmail.com" required autocomplete>
+                    </div>
+                    <div>
+                        <label for="phone-number">Phone number:</label>
+                        <input type="text" id="phone-number" name="phone-number" placeholder="+ 48 100 100 100" minlength="9" maxlength="12" autocomplete>
+                    </div>
+                </form>
+                <form class="user-contact">
+                    <div>
+                        <label for="skype">Skype:</label>
+                        <input type="text" id="skype" name="skype" placeholder="Leonardo.D" minlength="3">
+                    </div>
+                    <div>
+                        <label for="icq">ICQ:</label>
+                        <input type="text" id="icq" name="icq" minlength="3">
+                    </div>
+                    <div>
+                        <label for="msn">Msn:</label>
+                        <input type="text" id="msn" name="msn" minlength="3">
+                    </div>
+                </form>
+                <form class="wallet">
+                    <div>
+                        <label for="wallet">Wallet:</label>
+                        <input type="text" id="wallet" name="wallet">
+                    </div>
+                </form>
+                <form class="set-password">
+                    <div>
+                        <label for="password">Password (min. 8):</label>
+                        <input type="password" id="password" name="password" minlength="8">
+                    </div>
+                    <div>
+                        <label for="password-repeat">Repeat:</label>
+                        <input type="password-repeat" id="password-repeat" name="password-repeat" minlength="8">
+                    </div>
+                </form>
+                <div>
+                    <a href="#" class="save-button">Save</a>
+                </div>
+            </section>
+
+            <!-- Details -->
+
+            <section class="section-details hidden">
+                <h3>DETAIL STATISTIC</h3>
+                <div class="details-field">
+                    <div class="details-table">
+                        <div class='date-picker'>
+                            <div class="date-inputs">
+                                <input class='begin-date' type='text' name='begin-date' />
+                                <input class='end-date' type='text' name='end-date' />
+                                <a href="#"><i class="fas fa-calendar-alt"></i></a>
+                                <a href="#"><i class="fas fa-undo-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper">
+                        <table>
+                            <tr>
+                                <th class="table-heading">Tracker name</th>
+                                <th class="table-heading">Initiated date</th>
+                                <th class="table-heading">Visits</th>
+                                <th class="table-heading">Unique</th>
+                                <th class="table-heading">Signups</th>
+                                <th class="table-heading">FTD</th>
+                                <th class="table-heading">Depositors</th>
+                                <th class="table-heading">Deposits ($) <i class="fas fa-chevron-down"></i></th>
+                                <th class="table-heading">Payout ($) <i class="fas fa-chevron-down"></i></th>
+                                <th class="table-heading">Turnover</th>
+                                <th class="table-heading">Deal</th>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>aff/sam_test</td>
+                                <td>17/08/19 (12:00)</td>
+                                <td>232</td>
+                                <td>114</td>
+                                <td>12</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>33 445.99</td>
+                                <td>145.99</td>
+                                <td>645.99</td>
+                                <td>cpl (200)</td>
+                            </tr>
+                          </table>
+                        </div>
+                          <div class="detail-pages">
+                            <a href="#"><i class="fas fa-chevron-left"></i></a>
+                            <div class="page-number">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                            </div>
+                            <a href="#"><i class="fas fa-chevron-right"></i></a>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payouts -->
+
+            <section class="section-payout-details section-details hidden">
+                <h3>PAYOUT HISTORY</h3>
+                <div class="details-field">
+                    <div class="details-table">
+                        <div class='date-picker'>
+                            <div class="date-inputs">
+                                <input class='begin-date' type='text' name='begin-date' />
+                                <input class='end-date' type='text' name='end-date' />
+                                <a href="#"><i class="fas fa-calendar-alt"></i></a>
+                                <a href="#"><i class="fas fa-undo-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper">
+                        <table>
+                            <tr>
+                                <th class="table-heading">Date</th>
+                                <th class="table-heading">Amount</th>
+                                <th class="table-heading">Deal</th>
+                                <th class="table-heading">Account</th>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>17/08/19 (12:00)</td>
+                                <td>145.99</td>
+                                <td>cpl (200)</td>
+                                <td>bank</td>
+                            </tr>
+                            
+                          </table>
+                          </div>
+                          <div class="detail-pages">
+                            <a href="#"><i class="fas fa-chevron-left"></i></a>
+                            <div class="page-number">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                            </div>
+                            <a href="#"><i class="fas fa-chevron-right"></i></a>
+                          </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New postback -->
+
+            <section class="section-new-postback hidden">
+                <h3>NEW POSTBACK</h3>
+                <div class="postback-parameters">
+                    <p>You can insert some parameters in this postback:</p>
+                    <label>Signup</label>
+                    <textarea type="text" id="signup" name="signup" placeholder="Signup"></textarea>
+                    <label>Postback</label>
+                    <textarea type="text" id="postback" name="postback" placeholder="Postback"></textarea>
+                </div>
+                <div class="postback-details">
+                    <label>Postback type</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>S2S</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>To countries</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>Select countries</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Sending options</label>
+                    <select type="w3-select" id="language" name="select-language">
+                        <option value="0" disabled selected>Select</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+                <div class="postback-status">
+                    <p><span>NOT</span> send statuses</p>
+                    <div class="statuses">
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        <div class="status">
+                            <label>
+                                <input type="checkbox">
+                                <div class="icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p>Lorem ipsum dolor</p> 
+                                <i class="fas fa-external-link-alt"></i>
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <p>Send after:</p>
+                    <div class="send-delay">
+                        <img src="images/postback-delay.png" alt="">
+                    </div>
+                </div>
+                <button class="create-pixel-btn">Create Pixel</button>
+            </section>
+
+            <!-- POPUPS  -->
+
+            <div class="popup-overlay hidden">
+
+                <!-- login  -->
+
+                <div class="login-popup hidden">
+                    <h3>LOGIN</h3>
+                    <div class="login-details">
+                        <div>
+                            <input type="text" id="username" name="username" placeholder="Username">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div>
+                            <input type="text" id="login-password" name="password" placeholder="Password">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <button class="login-btn">Enter</button>
+                    </div>
+                </div>
+
+                <!-- quit -->
+
+                <div class="quit-popup hidden">
+                    <p>Do you really want to quit?</p>
+                    <div>
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="quit-btn">Quit</button>
+                    </div>  
+                </div>
+
+                <!-- presonal chat -->
+
+                <div class="personal-chat-popup hidden">
+                    <div class="popup-heading">
+                        <h3>ONLINE CHAT WITH YOUR PERSONAL MANAGER </h3>
+                        <span class="close-window-btn"><a class="#">x</a></span>
+                    </div>
+                    <div class="recepient-info">
+                        <img src="https://i.ibb.co/3RMbvgn/pexels-pixabay-220453-1.jpg" alt="pexels-pixabay-220453-1" border="0">
+                        <div class="recepient-status">
+                            <p class="recepient-name">Wojciech B.</p>
+                            <p class="online">online</p>
+                        </div>
+                    </div>
+                    <div class="messages-display">
+                        <p class="message-you">Hi!</p>
+                        <p class="message-recepient">Hello!</p>
+                    </div>
+                    <div class="post-message">
+                        <div>
+                            <input type="text" id="message" name="message" placeholder="Enter the message...">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <button class="chat-send-btn">SEND</button>
+                    </div>  
+                </div>
+
+                <!-- add links -->
+
+                <div class="add-links-popup hidden">
+                    <div class="popup-heading">
+                        <h3>ADD URL</h3>
+                        <span class="close-window-btn"><a href="#">x</a></span>
+                    </div>
+                    <div class="select-field">
+                        <div class="select-scheme-name">
+                            <label>Scheme name</label>
+                            <input type="text" id="scheme-name" name="scheme-name" placeholder="Name">
+                            <!-- <i class="far fa-user"></i> -->
+                            <select type="w3-select" id="scheme" name="select-compain">
+                                <option value="src/images/gb.png" disabled selected>Select compain</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="select-language">
+                            <label>Language</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>EN</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="select-websites">
+                            <label>Select websites</label>
+                            <div class="websites">
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                                <div class="website">
+                                    <label>
+                                        <input type="checkbox">
+                                        <div class="icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <p>Lorem ipsum dolor</p> 
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="generated-link">
+                        <input type="text" placeholder="Generated link" disabled>
+                        <button class="copy-btn" disabled>Copy link</button>
+                        <button class="enter-btn">Enter</button>
+                    </div>
+                </div>
+
+                <!-- add banners -->
+
+                <div class="add-banners-popup hidden">
+                    <div class="popup-heading">
+                        <h3>ADD BANNERS</h3>
+                        <span class="close-window-btn"><a href="#">x</a></span>
+                    </div>
+                    <div class="select-field">
+                        <div class="select-scheme-name">
+                            <label>Scheme name</label>
+                            <input type="text" id="banner-name" name="scheme-name" placeholder="Name">
+                            <!-- <i class="far fa-user"></i> -->
+                            <label>Compain</label>
+                            <select type="w3-select" id="banner" name="select-compain">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="select-language">
+                            <label>Language</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>EN</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                        <div class="banner-details">
+                            <label>Weight-height</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Design</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Filetype</label>
+                            <select type="w3-select" id="language" name="select-language">
+                                <option value="0" disabled selected>All</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+
+                        </div>
+                        <div class="select-banners">
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="banner">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="select-websites">
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                            <div class="b-website">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="icon">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p>Lorem ipsum dolor</p> 
+                                    <i class="fas fa-external-link-alt"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="generated-link">
+                            <input type="text" placeholder="Generated link" disabled>
+                            <button class="copy-btn" disabled>Copy link</button>
+                            <button class="enter-btn">Enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="js/script.js" type="module"></script>
+    </body>
+    </html>
