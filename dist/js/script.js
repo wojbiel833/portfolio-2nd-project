@@ -62,7 +62,7 @@ const hidePages = function () {
 };
 // CHART
 const ctx = document.getElementById('myChart').getContext('2d');
-console.log(ctx);
+// console.log(ctx);
 
 const chart = new Chart(ctx, {
   // 1
@@ -113,10 +113,7 @@ hamburgerBtn.addEventListener('click', function () {
 // esc-closing
 document.addEventListener('keydown', function (e) {
   // console.log(e.key);
-
-  if (e.key === 'Escape') {
-    closeAllModals();
-  }
+  if (e.key === 'Escape') closeAllModals();
 });
 
 closeWindowBtns.forEach(function (btn) {
